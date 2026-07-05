@@ -9,13 +9,13 @@ namespace Flare.McpServer.Resources;
 [McpServerResourceType]
 public sealed class ComponentResourceProvider
 {
-    private readonly ComponentCatalog _catalog;
+    private readonly ComponentIndex _index;
     private readonly ComponentDocs _docs;
     private static readonly JsonSerializerOptions JsonOptions = new() { WriteIndented = true };
 
-    public ComponentResourceProvider(ComponentCatalog catalog, ComponentDocs docs)
+    public ComponentResourceProvider(ComponentIndex index, ComponentDocs docs)
     {
-        _catalog = catalog;
+        _index = index;
         _docs = docs;
     }
 
@@ -23,14 +23,14 @@ public sealed class ComponentResourceProvider
     [Description("List of all Flare component resource URIs")]
     public string ListComponentResources()
     {
-        var components = _catalog.GetAll();
+        var components = _index.GetAll();
         var resources = components.Select(c => new
         {
             uri = $"flare://components/{c.Name.ToLowerInvariant()}",
             name = c.Name,
             description = c.Description,
             hasDocs = _docs.HasDoc(c.Name),
-            mimeType = "application/json"
+            mimeType = "text/markdown"
         });
 
         return JsonSerializer.Serialize(new
@@ -40,49 +40,29 @@ public sealed class ComponentResourceProvider
         }, JsonOptions);
     }
 
-    [McpServerResource(UriTemplate = "flare://components/{name}", Name = "Component Details", MimeType = "application/json")]
-    [Description("Get full details and documentation for a specific Flare component")]
+    [McpServerResource(UriTemplate = "flare://components/{name}", Name = "Component Documentation", MimeType = "text/markdown")]
+    [Description("Get full API reference and documentation for a specific Flare component as markdown")]
     public ResourceContents GetComponentResource(string name)
     {
-        var component = _catalog.GetByName(name);
+        var entry = _index.GetByName(name);
 
-        if (component is null)
+        if (entry is null)
         {
             return new TextResourceContents
             {
                 Uri = $"flare://components/{name}",
-                MimeType = "application/json",
-                Text = JsonSerializer.Serialize(new
-                {
-                    error = $"Component '{name}' not found",
-                    availableComponents = _catalog.GetAll().Select(c => c.Name).Order()
-                }, JsonOptions)
+                MimeType = "text/markdown",
+                Text = $"# Component Not Found\n\nComponent '{name}' not found.\n\nAvailable: {string.Join(", ", _index.GetAll().Select(c => c.Name).Order())}"
             };
         }
 
-        var doc = _docs.GetDoc(name);
-
-        var result = new
-        {
-            component.Name,
-            component.DisplayName,
-            component.Category,
-            component.Description,
-            component.Parameters,
-            component.Events,
-            component.SubComponents,
-            component.Examples,
-            component.Tags,
-            Documentation = doc,
-            component.DocUrl,
-            component.ApiUrl
-        };
+        var doc = _docs.GetDoc(name) ?? $"# {entry.DisplayName}\n\n{entry.Description}\n\n*No detailed documentation available.*";
 
         return new TextResourceContents
         {
             Uri = $"flare://components/{name.ToLowerInvariant()}",
-            MimeType = "application/json",
-            Text = JsonSerializer.Serialize(result, JsonOptions)
+            MimeType = "text/markdown",
+            Text = doc
         };
     }
 }

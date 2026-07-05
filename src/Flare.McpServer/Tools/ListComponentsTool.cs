@@ -8,14 +8,14 @@ namespace Flare.McpServer.Tools;
 [McpServerToolType]
 public sealed class ListComponentsTool
 {
-    [McpServerTool, Description("List all Flare Blazor components, optionally filtered by category. Categories: Inputs, Buttons, DataDisplay, Navigation, Overlays, Feedback, Display, Layout.")]
+    [McpServerTool, Description("List all Flare Blazor components, optionally filtered by category. Categories: Buttons, Inputs, DataDisplay, Navigation, Overlays, Feedback, Display, Layout, IDE, Theming.")]
     public static string ListComponents(
-        ComponentCatalog catalog,
+        ComponentIndex index,
         [Description("Filter by category. Omit to list all.")] string? category = null)
     {
         var components = string.IsNullOrEmpty(category)
-            ? catalog.GetAll()
-            : catalog.GetByCategory(category);
+            ? index.GetAll()
+            : index.GetByCategory(category);
 
         var result = components.Select(c => new
         {
@@ -29,7 +29,7 @@ public sealed class ListComponentsTool
         {
             components = result,
             total = components.Count,
-            categories = catalog.GetCategories()
+            categories = index.GetCategories()
         }, new JsonSerializerOptions { WriteIndented = true });
     }
 }

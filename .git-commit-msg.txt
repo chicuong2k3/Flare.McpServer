@@ -1,0 +1,19 @@
+Convert component API docs from JSON to markdown
+
+- Delete 116 JSON component files and structured models (ComponentInfo, ComponentParameter, ComponentEvent, EnumInfo)
+- Delete ComponentCatalog and GenerateCodeTool
+- Create 116 markdown files from JSON source data with full parameter tables, events, examples, and merged existing docs
+- Generate _index.json for fast listing/search/category filtering
+- Add ComponentIndex.cs (loads _index.json at startup, provides GetAll/GetByName/GetByCategory/Search)
+- Update ComponentDocs.cs to load from both Data/Components/*.md and Data/Docs/*.md
+- Rewrite ListComponentsTool (uses ComponentIndex)
+- Rewrite GetComponentTool (returns raw markdown, no includeDocs param)
+- Rewrite SearchComponentsTool (uses ComponentIndex, added deep mode for full-text doc search)
+- Rewrite ComponentResourceProvider (serves text/markdown MIME for flare://components/{name})
+- Remove per-component docs from Data/Docs (consolidated into Data/Components/*.md)
+- Retain theming docs (getting-started, architecture, theme-creation-guide, ai-agents, component-conventions)
+- Add scripts/convert-json-to-md.js for regenerating docs from JSON source
+- Update Program.cs to register ComponentIndex instead of ComponentCatalog
+- Update csproj embedded resource patterns
+
+Co-authored-by: CommandCodeBot <noreply@commandcode.ai>

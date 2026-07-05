@@ -9,14 +9,15 @@ public class ComponentDocs
     public ComponentDocs()
     {
         _docs = new(StringComparer.OrdinalIgnoreCase);
-        LoadDocsFromEmbeddedResources();
+        LoadDocsFromEmbeddedResources("Components");
+        LoadDocsFromEmbeddedResources("Docs");
     }
 
-    private void LoadDocsFromEmbeddedResources()
+    private void LoadDocsFromEmbeddedResources(string folder)
     {
         var assembly = Assembly.GetExecutingAssembly();
         var resourceNames = assembly.GetManifestResourceNames()
-            .Where(r => r.Contains("Docs.") && r.EndsWith(".md"));
+            .Where(r => r.Contains($".{folder}.") && r.EndsWith(".md"));
 
         foreach (var resourceName in resourceNames)
         {

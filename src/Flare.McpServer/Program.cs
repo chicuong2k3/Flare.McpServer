@@ -5,7 +5,7 @@ using Microsoft.Extensions.Logging;
 
 var builder = Host.CreateApplicationBuilder(args);
 
-builder.Services.AddSingleton<ComponentCatalog>();
+builder.Services.AddSingleton<ComponentIndex>();
 builder.Services.AddSingleton<ComponentDocs>();
 
 builder.Services.AddMcpServer()

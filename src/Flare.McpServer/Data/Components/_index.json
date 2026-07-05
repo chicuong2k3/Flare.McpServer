@@ -1,0 +1,1625 @@
+{
+  "components": [
+    {
+      "name": "Accordion",
+      "category": "Layout",
+      "description": "Expandable accordion with multiple panels, single/multi expand modes.",
+      "displayName": "FlareAccordion",
+      "tags": [
+        "accordion",
+        "expand",
+        "collapse",
+        "panel",
+        "layout"
+      ],
+      "file": "Accordion.md"
+    },
+    {
+      "name": "Alert",
+      "category": "Feedback",
+      "description": "Alert component for displaying important messages with severity levels, icons, and dismissible support.",
+      "displayName": "FlareAlert",
+      "tags": [
+        "alert",
+        "message",
+        "notification",
+        "feedback",
+        "banner",
+        "warning"
+      ],
+      "file": "Alert.md"
+    },
+    {
+      "name": "AppBar",
+      "category": "Navigation",
+      "description": "Top app bar with navigation toggle, title, actions, and sticky/scroll behavior.",
+      "displayName": "FlareAppBar",
+      "tags": [
+        "header",
+        "appbar",
+        "navigation",
+        "toolbar",
+        "topbar"
+      ],
+      "file": "AppBar.md"
+    },
+    {
+      "name": "Autocomplete",
+      "category": "Inputs",
+      "description": "Autocomplete input with search, filtering, and item template support.",
+      "displayName": "FlareAutocomplete",
+      "tags": [
+        "autocomplete",
+        "search",
+        "suggestions",
+        "input",
+        "form"
+      ],
+      "file": "Autocomplete.md"
+    },
+    {
+      "name": "Avatar",
+      "category": "Display",
+      "description": "Avatar component for user profile images, initials, or icons with grouping support.",
+      "displayName": "FlareAvatar",
+      "tags": [
+        "avatar",
+        "profile",
+        "image",
+        "user",
+        "initials",
+        "icon"
+      ],
+      "file": "Avatar.md"
+    },
+    {
+      "name": "AvatarGroup",
+      "category": "Display",
+      "description": "Group of overlapping avatars with overflow count indicator.",
+      "displayName": "FlareAvatarGroup",
+      "tags": [
+        "avatar",
+        "group",
+        "users",
+        "stack",
+        "overflow"
+      ],
+      "file": "AvatarGroup.md"
+    },
+    {
+      "name": "Backstage",
+      "category": "Navigation",
+      "description": "Office-style backstage view that slides in over the app with category navigation and content panels.",
+      "displayName": "FlareBackstage",
+      "tags": [
+        "backstage",
+        "office",
+        "navigation",
+        "menu"
+      ],
+      "file": "Backstage.md"
+    },
+    {
+      "name": "Badge",
+      "category": "Display",
+      "description": "Badge component for displaying counts, status indicators, or labels.",
+      "displayName": "FlareBadge",
+      "tags": [
+        "badge",
+        "indicator",
+        "notification",
+        "count",
+        "status",
+        "label"
+      ],
+      "file": "Badge.md"
+    },
+    {
+      "name": "Breadcrumb",
+      "category": "Navigation",
+      "description": "Breadcrumb navigation trail showing the current page's location in the hierarchy.",
+      "displayName": "FlareBreadcrumb",
+      "tags": [
+        "breadcrumb",
+        "navigation",
+        "trail",
+        "path",
+        "hierarchy"
+      ],
+      "file": "Breadcrumb.md"
+    },
+    {
+      "name": "Button",
+      "category": "Buttons",
+      "description": "Highly customizable button with five visual variants (Filled/Outlined/Text/Elevated/Tonal), leading/trailing icons, loading state with spinner, link mode via Href, press-morph animation, and color support via FlareColor.",
+      "displayName": "FlareButton",
+      "tags": [
+        "button",
+        "action",
+        "click",
+        "form",
+        "submit",
+        "icon",
+        "link"
+      ],
+      "file": "Button.md"
+    },
+    {
+      "name": "ButtonGroup",
+      "category": "Buttons",
+      "description": "Group of buttons with shared variant, color, and size.",
+      "displayName": "FlareButtonGroup",
+      "tags": [
+        "button",
+        "group",
+        "toolbar",
+        "actions"
+      ],
+      "file": "ButtonGroup.md"
+    },
+    {
+      "name": "Calendar",
+      "category": "Inputs",
+      "description": "Standalone calendar for date selection, date range, and event display.",
+      "displayName": "FlareCalendar",
+      "tags": [
+        "input",
+        "calendar",
+        "date",
+        "month",
+        "picker"
+      ],
+      "file": "Calendar.md"
+    },
+    {
+      "name": "Card",
+      "category": "DataDisplay",
+      "description": "Card container with five visual variants (Elevated/Filled/Outlined/Tonal/Text), selectable state, link mode (Href), compact horizontal layout, and sub-component anatomy (Header/Content/Footer/Actions/Media).",
+      "displayName": "FlareCard",
+      "tags": [
+        "card",
+        "container",
+        "panel",
+        "selectable",
+        "layout",
+        "elevation"
+      ],
+      "file": "Card.md"
+    },
+    {
+      "name": "Carousel",
+      "category": "DataDisplay",
+      "description": "Image/content carousel with slide transitions, autoplay, and navigation controls. Separate package: Flare.Components.Carousel.",
+      "displayName": "FlareCarousel",
+      "tags": [
+        "carousel",
+        "slideshow",
+        "images",
+        "gallery",
+        "slider"
+      ],
+      "file": "Carousel.md"
+    },
+    {
+      "name": "Chart",
+      "category": "DataDisplay",
+      "description": "SVG chart component supporting line, bar, pie, and donut charts with theme colors, hover tooltips, and legend.",
+      "displayName": "FlareChart",
+      "tags": [
+        "chart",
+        "graph",
+        "visualization",
+        "data",
+        "plot",
+        "svg"
+      ],
+      "file": "Chart.md"
+    },
+    {
+      "name": "Checkbox",
+      "category": "Inputs",
+      "description": "Checkbox component for boolean values with label and indeterminate state.",
+      "displayName": "FlareCheckbox",
+      "tags": [
+        "input",
+        "checkbox",
+        "toggle",
+        "boolean",
+        "form"
+      ],
+      "file": "Checkbox.md"
+    },
+    {
+      "name": "CheckboxGroup",
+      "category": "Inputs",
+      "description": "Group of checkboxes for multi-selection with validation support.",
+      "displayName": "FlareCheckboxGroup",
+      "tags": [
+        "checkbox",
+        "multi-select",
+        "group",
+        "input",
+        "form"
+      ],
+      "file": "CheckboxGroup.md"
+    },
+    {
+      "name": "Chip",
+      "category": "Display",
+      "description": "Chip/tag component for filtering, selection, or displaying categories with optional icons and close button.",
+      "displayName": "FlareChip",
+      "tags": [
+        "chip",
+        "tag",
+        "label",
+        "filter",
+        "badge"
+      ],
+      "file": "Chip.md"
+    },
+    {
+      "name": "ChipGroup",
+      "category": "Display",
+      "description": "Container for multiple chips with selection and filtering support.",
+      "displayName": "FlareChipGroup",
+      "tags": [
+        "chip",
+        "group",
+        "filter",
+        "selection",
+        "tags"
+      ],
+      "file": "ChipGroup.md"
+    },
+    {
+      "name": "Clipboard",
+      "category": "Buttons",
+      "description": "Copy-to-clipboard utility with feedback via IFlareClipboard service.",
+      "displayName": "FlareClipboard",
+      "tags": [
+        "clipboard",
+        "copy",
+        "utility"
+      ],
+      "file": "Clipboard.md"
+    },
+    {
+      "name": "ClockDial",
+      "category": "Inputs",
+      "description": "Analog clock face for time selection with hour and minute hands.",
+      "displayName": "FlareClockDial",
+      "tags": [
+        "input",
+        "clock",
+        "time",
+        "dial",
+        "analog"
+      ],
+      "file": "ClockDial.md"
+    },
+    {
+      "name": "CodeBlock",
+      "category": "Display",
+      "description": "Syntax-highlighted code block with line numbers, copy button, and language detection.",
+      "displayName": "FlareCodeBlock",
+      "tags": [
+        "code",
+        "syntax",
+        "highlight",
+        "editor",
+        "display"
+      ],
+      "file": "CodeBlock.md"
+    },
+    {
+      "name": "ColorCustomizer",
+      "category": "Theming",
+      "description": "UI widget to customize theme colors at runtime with palette and mode selection.",
+      "displayName": "FlareColorCustomizer",
+      "tags": [
+        "theme",
+        "color",
+        "customizer",
+        "palette",
+        "mode"
+      ],
+      "file": "ColorCustomizer.md"
+    },
+    {
+      "name": "ColorModeToggle",
+      "category": "Theming",
+      "description": "Button toggle to switch between light and dark mode.",
+      "displayName": "FlareColorModeToggle",
+      "tags": [
+        "theme",
+        "dark",
+        "toggle",
+        "mode"
+      ],
+      "file": "ColorModeToggle.md"
+    },
+    {
+      "name": "ColorPicker",
+      "category": "Inputs",
+      "description": "Color picker with preset swatches, custom hex input, and RGB sliders.",
+      "displayName": "FlareColorPicker",
+      "tags": [
+        "colorpicker",
+        "color",
+        "picker",
+        "input",
+        "form"
+      ],
+      "file": "ColorPicker.md"
+    },
+    {
+      "name": "ConfirmDialogProvider",
+      "category": "Overlays",
+      "description": "Provider for IDialogService.ConfirmAsync showing themed confirmation dialogs.",
+      "displayName": "FlareConfirmDialogProvider",
+      "tags": [
+        "confirm",
+        "dialog",
+        "provider"
+      ],
+      "file": "ConfirmDialogProvider.md"
+    },
+    {
+      "name": "Container",
+      "category": "Layout",
+      "description": "Centered content container with configurable max-width breakpoints.",
+      "displayName": "FlareContainer",
+      "tags": [
+        "layout",
+        "container",
+        "center",
+        "width",
+        "responsive"
+      ],
+      "file": "Container.md"
+    },
+    {
+      "name": "DataGrid",
+      "category": "DataDisplay",
+      "description": "Advanced data grid with sorting, filtering, paging, grouping, virtualization, column resize, row selection, inline editing, and CSV export.",
+      "displayName": "FlareDataGrid",
+      "tags": [
+        "data",
+        "grid",
+        "table",
+        "sort",
+        "filter",
+        "pagination",
+        "virtualization"
+      ],
+      "file": "DataGrid.md"
+    },
+    {
+      "name": "DataTree",
+      "category": "DataDisplay",
+      "description": "Tree view for arbitrary data with lazy loading, checkboxes, and icons.",
+      "displayName": "FlareDataTree",
+      "tags": [
+        "tree",
+        "data",
+        "hierarchy",
+        "folder"
+      ],
+      "file": "DataTree.md"
+    },
+    {
+      "name": "DatePicker",
+      "category": "Inputs",
+      "description": "Date picker with calendar popup, min/max dates, and format options.",
+      "displayName": "FlareDatePicker",
+      "tags": [
+        "datepicker",
+        "calendar",
+        "date",
+        "input",
+        "form"
+      ],
+      "file": "DatePicker.md"
+    },
+    {
+      "name": "DateRangePicker",
+      "category": "Inputs",
+      "description": "Date range picker for selecting start and end dates with a calendar popup.",
+      "displayName": "FlareDateRangePicker",
+      "tags": [
+        "input",
+        "date",
+        "range",
+        "calendar",
+        "picker",
+        "form"
+      ],
+      "file": "DateRangePicker.md"
+    },
+    {
+      "name": "DateTimePicker",
+      "category": "Inputs",
+      "description": "Combined date and time picker in a single component.",
+      "displayName": "FlareDateTimePicker",
+      "tags": [
+        "input",
+        "datetime",
+        "calendar",
+        "time",
+        "form"
+      ],
+      "file": "DateTimePicker.md"
+    },
+    {
+      "name": "Dialog",
+      "category": "Overlays",
+      "description": "Modal dialog with title, icon, body content, actions, scrim close, ESC close, and divider. Use with IDialogService or standalone via @bind-Visible.",
+      "displayName": "FlareDialog",
+      "tags": [
+        "dialog",
+        "modal",
+        "overlay",
+        "popup",
+        "confirm",
+        "alert"
+      ],
+      "file": "Dialog.md"
+    },
+    {
+      "name": "DialogProvider",
+      "category": "Overlays",
+      "description": "Provider component for the dialog service. Place once in the layout to enable IDialogService.",
+      "displayName": "FlareDialogProvider",
+      "tags": [
+        "dialog",
+        "provider",
+        "modal"
+      ],
+      "file": "DialogProvider.md"
+    },
+    {
+      "name": "Divider",
+      "category": "Layout",
+      "description": "Horizontal or vertical divider line separating content sections.",
+      "displayName": "FlareDivider",
+      "tags": [
+        "divider",
+        "separator",
+        "line",
+        "layout"
+      ],
+      "file": "Divider.md"
+    },
+    {
+      "name": "DocumentTabs",
+      "category": "IDE",
+      "description": "Tabbed document container like Visual Studio's editor tabs. Separate package: Flare.Components.IDE.",
+      "displayName": "FlareDocumentTabs",
+      "tags": [
+        "tabs",
+        "document",
+        "editor",
+        "ide"
+      ],
+      "file": "DocumentTabs.md"
+    },
+    {
+      "name": "Drawer",
+      "category": "Overlays",
+      "description": "Slide-out drawer panel from any screen edge for navigation or content.",
+      "displayName": "FlareDrawer",
+      "tags": [
+        "drawer",
+        "sidebar",
+        "panel",
+        "overlay",
+        "navigation",
+        "slide"
+      ],
+      "file": "Drawer.md"
+    },
+    {
+      "name": "DropZone",
+      "category": "Inputs",
+      "description": "Drag and drop target area for file uploads with visual feedback.",
+      "displayName": "FlareDropZone",
+      "tags": [
+        "input",
+        "drag",
+        "drop",
+        "upload",
+        "file"
+      ],
+      "file": "DropZone.md"
+    },
+    {
+      "name": "EmptyState",
+      "category": "Feedback",
+      "description": "Empty state placeholder with icon, title, description, and optional action button.",
+      "displayName": "FlareEmptyState",
+      "tags": [
+        "empty",
+        "state",
+        "placeholder",
+        "zero",
+        "no-data"
+      ],
+      "file": "EmptyState.md"
+    },
+    {
+      "name": "FileUpload",
+      "category": "Inputs",
+      "description": "File upload component with drag-and-drop, multi-file, preview, and progress support.",
+      "displayName": "FlareFileUpload",
+      "tags": [
+        "file",
+        "upload",
+        "drag",
+        "drop",
+        "input",
+        "form"
+      ],
+      "file": "FileUpload.md"
+    },
+    {
+      "name": "FloatingActionButton",
+      "category": "Buttons",
+      "description": "Material FAB - floating circular action button pinned to the viewport.",
+      "displayName": "FlareFloatingActionButton",
+      "tags": [
+        "button",
+        "fab",
+        "floating",
+        "action",
+        "material"
+      ],
+      "file": "FloatingActionButton.md"
+    },
+    {
+      "name": "FloatingActionMenu",
+      "category": "Buttons",
+      "description": "FAB that expands into a radial or vertical menu of action items.",
+      "displayName": "FlareFloatingActionMenu",
+      "tags": [
+        "fab",
+        "menu",
+        "floating",
+        "speed-dial",
+        "actions"
+      ],
+      "file": "FloatingActionMenu.md"
+    },
+    {
+      "name": "Form",
+      "category": "Inputs",
+      "description": "Wraps Blazor's EditForm with Flare-styled layout, validation summary, and submit handling.",
+      "displayName": "FlareForm",
+      "tags": [
+        "form",
+        "validation",
+        "editform",
+        "submit"
+      ],
+      "file": "Form.md"
+    },
+    {
+      "name": "FormBuilder",
+      "category": "Inputs",
+      "description": "Dynamic form builder that generates form fields from metadata/models at runtime.",
+      "displayName": "FlareFormBuilder",
+      "tags": [
+        "input",
+        "form",
+        "builder",
+        "dynamic",
+        "generator"
+      ],
+      "file": "FormBuilder.md"
+    },
+    {
+      "name": "Grid",
+      "category": "Layout",
+      "description": "CSS grid layout component with responsive column spans and gutters.",
+      "displayName": "FlareGrid",
+      "tags": [
+        "layout",
+        "grid",
+        "columns",
+        "responsive",
+        "flex"
+      ],
+      "file": "Grid.md"
+    },
+    {
+      "name": "Hidden",
+      "category": "Layout",
+      "description": "Conditionally hide content based on responsive breakpoints.",
+      "displayName": "FlareHidden",
+      "tags": [
+        "layout",
+        "hidden",
+        "responsive",
+        "breakpoint",
+        "visibility"
+      ],
+      "file": "Hidden.md"
+    },
+    {
+      "name": "Highlighter",
+      "category": "Display",
+      "description": "Highlights matching text within a string with a colored background.",
+      "displayName": "FlareHighlighter",
+      "tags": [
+        "highlight",
+        "search",
+        "text",
+        "mark"
+      ],
+      "file": "Highlighter.md"
+    },
+    {
+      "name": "Icon",
+      "category": "Display",
+      "description": "Material Symbols icon component with configurable size, fill, weight, and grade.",
+      "displayName": "FlareIcon",
+      "tags": [
+        "icon",
+        "material",
+        "symbol",
+        "visual"
+      ],
+      "file": "Icon.md"
+    },
+    {
+      "name": "IdeLayout",
+      "category": "IDE",
+      "description": "IDE shell layout with ribbon, document tabs, tool panels, splitter, and status bar. Separate package: Flare.Components.IDE.",
+      "displayName": "FlareIdeLayout",
+      "tags": [
+        "ide",
+        "layout",
+        "ribbon",
+        "tabs",
+        "panel",
+        "shell"
+      ],
+      "file": "IdeLayout.md"
+    },
+    {
+      "name": "Image",
+      "category": "Display",
+      "description": "Image component with lazy loading, placeholders, error fallback, and aspect ratio.",
+      "displayName": "FlareImage",
+      "tags": [
+        "image",
+        "picture",
+        "photo",
+        "media",
+        "lazy"
+      ],
+      "file": "Image.md"
+    },
+    {
+      "name": "InfiniteScroll",
+      "category": "Layout",
+      "description": "Scroll container that triggers data loading when reaching the bottom.",
+      "displayName": "FlareInfiniteScroll",
+      "tags": [
+        "scroll",
+        "infinite",
+        "load",
+        "lazy",
+        "pagination"
+      ],
+      "file": "InfiniteScroll.md"
+    },
+    {
+      "name": "Kanban",
+      "category": "DataDisplay",
+      "description": "Kanban board with draggable cards, swimlanes, and column management. Separate package: Flare.Components.Kanban.",
+      "displayName": "FlareKanban",
+      "tags": [
+        "kanban",
+        "board",
+        "drag",
+        "cards",
+        "project",
+        "task"
+      ],
+      "file": "Kanban.md"
+    },
+    {
+      "name": "Layout",
+      "category": "Layout",
+      "description": "Responsive page layout with app bar, drawer, and content areas.",
+      "displayName": "FlareLayout",
+      "tags": [
+        "layout",
+        "page",
+        "shell",
+        "structure",
+        "responsive"
+      ],
+      "file": "Layout.md"
+    },
+    {
+      "name": "Lazy",
+      "category": "Layout",
+      "description": "Lazy-loads content only when scrolled into the viewport for performance.",
+      "displayName": "FlareLazy",
+      "tags": [
+        "lazy",
+        "load",
+        "performance",
+        "viewport",
+        "defer"
+      ],
+      "file": "Lazy.md"
+    },
+    {
+      "name": "Link",
+      "category": "Navigation",
+      "description": "Anchor link component with theme colors, underline options, and icon support.",
+      "displayName": "FlareLink",
+      "tags": [
+        "link",
+        "anchor",
+        "navigation",
+        "url",
+        "href"
+      ],
+      "file": "Link.md"
+    },
+    {
+      "name": "List",
+      "category": "DataDisplay",
+      "description": "Simple list component with items, dividers, and selection support.",
+      "displayName": "FlareList",
+      "tags": [
+        "list",
+        "items",
+        "selection",
+        "menu"
+      ],
+      "file": "List.md"
+    },
+    {
+      "name": "Listbox",
+      "category": "Inputs",
+      "description": "Scrollable list selection with single and multi-select modes.",
+      "displayName": "FlareListbox",
+      "tags": [
+        "input",
+        "listbox",
+        "list",
+        "selection",
+        "form"
+      ],
+      "file": "Listbox.md"
+    },
+    {
+      "name": "Markdown",
+      "category": "Display",
+      "description": "Markdown renderer that converts markdown text to HTML with syntax highlighting.",
+      "displayName": "FlareMarkdown",
+      "tags": [
+        "markdown",
+        "render",
+        "html",
+        "text",
+        "format"
+      ],
+      "file": "Markdown.md"
+    },
+    {
+      "name": "MaskedField",
+      "category": "Inputs",
+      "description": "Text input with input mask for formatted values like phone numbers, dates, etc.",
+      "displayName": "FlareMaskedField",
+      "tags": [
+        "input",
+        "mask",
+        "format",
+        "phone",
+        "form"
+      ],
+      "file": "MaskedField.md"
+    },
+    {
+      "name": "MediaQuery",
+      "category": "Layout",
+      "description": "Conditionally renders content based on CSS media query breakpoints.",
+      "displayName": "FlareMediaQuery",
+      "tags": [
+        "responsive",
+        "media",
+        "query",
+        "breakpoint"
+      ],
+      "file": "MediaQuery.md"
+    },
+    {
+      "name": "Menu",
+      "category": "Navigation",
+      "description": "Dropdown menu component with items, groups, submenus, and keyboard navigation.",
+      "displayName": "FlareMenu",
+      "tags": [
+        "menu",
+        "dropdown",
+        "context menu",
+        "navigation"
+      ],
+      "file": "Menu.md"
+    },
+    {
+      "name": "MenuBar",
+      "category": "Navigation",
+      "description": "Horizontal menu bar with drop-down menus, similar to desktop application menus.",
+      "displayName": "FlareMenuBar",
+      "tags": [
+        "menubar",
+        "menu",
+        "desktop",
+        "toolbar"
+      ],
+      "file": "MenuBar.md"
+    },
+    {
+      "name": "MessageBoxProvider",
+      "category": "Overlays",
+      "description": "Provider for message box dialogs via IMessageBoxService. Place once in layout.",
+      "displayName": "FlareMessageBoxProvider",
+      "tags": [
+        "messagebox",
+        "dialog",
+        "alert",
+        "confirm",
+        "modal"
+      ],
+      "file": "MessageBoxProvider.md"
+    },
+    {
+      "name": "MultiSelect",
+      "category": "Inputs",
+      "description": "Multi-select dropdown with chips for selected values and search filtering.",
+      "displayName": "FlareMultiSelect",
+      "tags": [
+        "input",
+        "multi-select",
+        "dropdown",
+        "chips",
+        "form"
+      ],
+      "file": "MultiSelect.md"
+    },
+    {
+      "name": "NavMenu",
+      "category": "Navigation",
+      "description": "Navigation menu with nested groups, links, and auto-expand for active routes.",
+      "displayName": "FlareNavMenu",
+      "tags": [
+        "navigation",
+        "menu",
+        "sidebar",
+        "drawer",
+        "nav",
+        "link"
+      ],
+      "file": "NavMenu.md"
+    },
+    {
+      "name": "NumericField",
+      "category": "Inputs",
+      "description": "Number input field with increment/decrement buttons, min/max validation.",
+      "displayName": "FlareNumericField",
+      "tags": [
+        "input",
+        "number",
+        "numeric",
+        "form",
+        "integer"
+      ],
+      "file": "NumericField.md"
+    },
+    {
+      "name": "OnThisPage",
+      "category": "Navigation",
+      "description": "Table of contents that highlights the current section based on scroll position.",
+      "displayName": "FlareOnThisPage",
+      "tags": [
+        "toc",
+        "navigation",
+        "scroll",
+        "headings",
+        "sidebar"
+      ],
+      "file": "OnThisPage.md"
+    },
+    {
+      "name": "OtpField",
+      "category": "Inputs",
+      "description": "One-time password / verification code input with individual character boxes.",
+      "displayName": "FlareOtpField",
+      "tags": [
+        "input",
+        "otp",
+        "code",
+        "verification",
+        "pin",
+        "2fa"
+      ],
+      "file": "OtpField.md"
+    },
+    {
+      "name": "Overlay",
+      "category": "Overlays",
+      "description": "Semi-transparent backdrop used behind dialogs, drawers, and menus.",
+      "displayName": "FlareOverlay",
+      "tags": [
+        "overlay",
+        "backdrop",
+        "cover",
+        "mask"
+      ],
+      "file": "Overlay.md"
+    },
+    {
+      "name": "Pagination",
+      "category": "Navigation",
+      "description": "Pagination component with page buttons, ellipsis, first/last navigation, and page size control.",
+      "displayName": "FlarePagination",
+      "tags": [
+        "pagination",
+        "page",
+        "navigation",
+        "pager"
+      ],
+      "file": "Pagination.md"
+    },
+    {
+      "name": "Paper",
+      "category": "DataDisplay",
+      "description": "Elevated surface panel with shadow and optional outline.",
+      "displayName": "FlarePaper",
+      "tags": [
+        "paper",
+        "surface",
+        "panel",
+        "elevation"
+      ],
+      "file": "Paper.md"
+    },
+    {
+      "name": "PasswordField",
+      "category": "Inputs",
+      "description": "Password input with show/hide toggle and strength indicator.",
+      "displayName": "FlarePasswordField",
+      "tags": [
+        "input",
+        "password",
+        "secure",
+        "form",
+        "auth"
+      ],
+      "file": "PasswordField.md"
+    },
+    {
+      "name": "Popover",
+      "category": "Overlays",
+      "description": "Popover overlay anchored to an element for contextual content.",
+      "displayName": "FlarePopover",
+      "tags": [
+        "popover",
+        "overlay",
+        "dropdown",
+        "context",
+        "popup"
+      ],
+      "file": "Popover.md"
+    },
+    {
+      "name": "Progress",
+      "category": "Feedback",
+      "description": "Progress indicator with linear and circular variants, determinate and indeterminate modes.",
+      "displayName": "FlareProgress",
+      "tags": [
+        "progress",
+        "loading",
+        "indicator",
+        "bar",
+        "circular"
+      ],
+      "file": "Progress.md"
+    },
+    {
+      "name": "PropertyGrid",
+      "category": "DataDisplay",
+      "description": "Property grid for displaying and editing object properties in key-value rows.",
+      "displayName": "FlarePropertyGrid",
+      "tags": [
+        "properties",
+        "grid",
+        "editor",
+        "key-value",
+        "settings"
+      ],
+      "file": "PropertyGrid.md"
+    },
+    {
+      "name": "QrCode",
+      "category": "Display",
+      "description": "QR code generator that renders an SVG QR code from string data. Separate package: Flare.Components.QrCode.",
+      "displayName": "FlareQrCode",
+      "tags": [
+        "qrcode",
+        "barcode",
+        "encode",
+        "url"
+      ],
+      "file": "QrCode.md"
+    },
+    {
+      "name": "Radio",
+      "category": "Inputs",
+      "description": "Radio button for single selection within a group.",
+      "displayName": "FlareRadio",
+      "tags": [
+        "radio",
+        "input",
+        "selection",
+        "form",
+        "group"
+      ],
+      "file": "Radio.md"
+    },
+    {
+      "name": "Rating",
+      "category": "Inputs",
+      "description": "Star rating input with customizable count, size, and color.",
+      "displayName": "FlareRating",
+      "tags": [
+        "rating",
+        "stars",
+        "input",
+        "feedback",
+        "review"
+      ],
+      "file": "Rating.md"
+    },
+    {
+      "name": "Resizable",
+      "category": "Layout",
+      "description": "Resizable container with drag handles on any edge.",
+      "displayName": "FlareResizable",
+      "tags": [
+        "resize",
+        "drag",
+        "container",
+        "layout"
+      ],
+      "file": "Resizable.md"
+    },
+    {
+      "name": "Ribbon",
+      "category": "IDE",
+      "description": "Office-style ribbon toolbar with tabs, groups, buttons, and dropdowns. Separate package: Flare.Components.IDE.",
+      "displayName": "FlareRibbon",
+      "tags": [
+        "ribbon",
+        "toolbar",
+        "office",
+        "ide"
+      ],
+      "file": "Ribbon.md"
+    },
+    {
+      "name": "RichTextEditor",
+      "category": "Inputs",
+      "description": "WYSIWYG rich text editor with formatting toolbar. Separate package: Flare.Components.RichTextEditor.",
+      "displayName": "FlareRichTextEditor",
+      "tags": [
+        "editor",
+        "richtext",
+        "wysiwyg",
+        "html",
+        "content"
+      ],
+      "file": "RichTextEditor.md"
+    },
+    {
+      "name": "ScrollTop",
+      "category": "Navigation",
+      "description": "Floating button that appears when scrolling down to quickly jump to top.",
+      "displayName": "FlareScrollTop",
+      "tags": [
+        "scroll",
+        "top",
+        "navigation",
+        "button",
+        "floating"
+      ],
+      "file": "ScrollTop.md"
+    },
+    {
+      "name": "Select",
+      "category": "Inputs",
+      "description": "Single-value dropdown select with search, grouping, virtualization, declarative <option> parsing, ItemTemplate/ValueTemplate, and full field chrome (label, helper, validation).",
+      "displayName": "FlareSelect",
+      "tags": [
+        "input",
+        "select",
+        "dropdown",
+        "form",
+        "choice",
+        "combobox"
+      ],
+      "file": "Select.md"
+    },
+    {
+      "name": "SignaturePad",
+      "category": "Inputs",
+      "description": "Signature capture component for drawing signatures with touch or mouse.",
+      "displayName": "FlareSignaturePad",
+      "tags": [
+        "input",
+        "signature",
+        "draw",
+        "canvas",
+        "pen"
+      ],
+      "file": "SignaturePad.md"
+    },
+    {
+      "name": "Skeleton",
+      "category": "Feedback",
+      "description": "Skeleton loading placeholder for text, cards, avatars, and other content shapes.",
+      "displayName": "FlareSkeleton",
+      "tags": [
+        "loading",
+        "placeholder",
+        "skeleton",
+        "shimmer",
+        "placeholder"
+      ],
+      "file": "Skeleton.md"
+    },
+    {
+      "name": "Slider",
+      "category": "Inputs",
+      "description": "Slider for selecting a numeric value or range with MD3 Expressive + Fluent support.",
+      "displayName": "FlareSlider",
+      "tags": [
+        "input",
+        "slider",
+        "range",
+        "number",
+        "form"
+      ],
+      "file": "Slider.md"
+    },
+    {
+      "name": "Snackbar",
+      "category": "Feedback",
+      "description": "Snackbar notification system. Use ISnackbarService to show notifications programmatically.",
+      "displayName": "FlareSnackbarProvider",
+      "tags": [
+        "notification",
+        "toast",
+        "snackbar",
+        "message",
+        "feedback",
+        "alert"
+      ],
+      "file": "Snackbar.md"
+    },
+    {
+      "name": "Spacer",
+      "category": "Layout",
+      "description": "Flex spacer that fills remaining space in a flex container.",
+      "displayName": "FlareSpacer",
+      "tags": [
+        "layout",
+        "spacer",
+        "flex",
+        "fill"
+      ],
+      "file": "Spacer.md"
+    },
+    {
+      "name": "SpeedDial",
+      "category": "Buttons",
+      "description": "Speed dial component that expands into multiple action buttons on click.",
+      "displayName": "FlareSpeedDial",
+      "tags": [
+        "speeddial",
+        "fab",
+        "actions",
+        "expand"
+      ],
+      "file": "SpeedDial.md"
+    },
+    {
+      "name": "SplitButton",
+      "category": "Buttons",
+      "description": "Button with a dropdown menu for additional actions. Main action + more options pattern.",
+      "displayName": "FlareSplitButton",
+      "tags": [
+        "button",
+        "split",
+        "dropdown",
+        "menu",
+        "actions"
+      ],
+      "file": "SplitButton.md"
+    },
+    {
+      "name": "Splitter",
+      "category": "Layout",
+      "description": "Resizable split panels with draggable divider, horizontal or vertical.",
+      "displayName": "FlareSplitter",
+      "tags": [
+        "layout",
+        "splitter",
+        "resize",
+        "panels",
+        "divider"
+      ],
+      "file": "Splitter.md"
+    },
+    {
+      "name": "Stack",
+      "category": "Layout",
+      "description": "Flexbox layout component for horizontal or vertical stacking with spacing.",
+      "displayName": "FlareStack",
+      "tags": [
+        "layout",
+        "stack",
+        "flex",
+        "container",
+        "spacing"
+      ],
+      "file": "Stack.md"
+    },
+    {
+      "name": "StatusBar",
+      "category": "IDE",
+      "description": "Status bar with sections for messages, progress, and indicators. Separate package: Flare.Components.IDE.",
+      "displayName": "FlareStatusBar",
+      "tags": [
+        "statusbar",
+        "ide",
+        "footer"
+      ],
+      "file": "StatusBar.md"
+    },
+    {
+      "name": "Stepper",
+      "category": "Navigation",
+      "description": "Stepper wizard component for multi-step processes with linear/non-linear modes.",
+      "displayName": "FlareStepper",
+      "tags": [
+        "stepper",
+        "wizard",
+        "steps",
+        "workflow",
+        "multi-step"
+      ],
+      "file": "Stepper.md"
+    },
+    {
+      "name": "Switch",
+      "category": "Inputs",
+      "description": "Toggle switch component for boolean values with label support.",
+      "displayName": "FlareSwitch",
+      "tags": [
+        "input",
+        "switch",
+        "toggle",
+        "boolean",
+        "form"
+      ],
+      "file": "Switch.md"
+    },
+    {
+      "name": "Table",
+      "category": "DataDisplay",
+      "description": "Simple read-only table with themed styling, less feature-rich than DataGrid.",
+      "displayName": "FlareTable",
+      "tags": [
+        "data",
+        "table",
+        "display",
+        "rows",
+        "columns"
+      ],
+      "file": "Table.md"
+    },
+    {
+      "name": "TableOfContents",
+      "category": "Navigation",
+      "description": "Table of contents with nested link hierarchy and expand/collapse.",
+      "displayName": "FlareTableOfContents",
+      "tags": [
+        "toc",
+        "contents",
+        "navigation",
+        "sidebar"
+      ],
+      "file": "TableOfContents.md"
+    },
+    {
+      "name": "Tabs",
+      "category": "Navigation",
+      "description": "Tabbed navigation container with animated active indicator.",
+      "displayName": "FlareTabs",
+      "tags": [
+        "navigation",
+        "tabs",
+        "tab",
+        "panel",
+        "container"
+      ],
+      "file": "Tabs.md"
+    },
+    {
+      "name": "TagField",
+      "category": "Inputs",
+      "description": "Tag/chips input field for multiple values like email recipients or keywords.",
+      "displayName": "FlareTagField",
+      "tags": [
+        "input",
+        "tag",
+        "chip",
+        "multi-value",
+        "token",
+        "form"
+      ],
+      "file": "TagField.md"
+    },
+    {
+      "name": "Text",
+      "category": "Display",
+      "description": "Typography component for rendering text with theme-aware type scales and colors.",
+      "displayName": "FlareText",
+      "tags": [
+        "text",
+        "typography",
+        "title",
+        "heading",
+        "paragraph"
+      ],
+      "file": "Text.md"
+    },
+    {
+      "name": "TextArea",
+      "category": "Inputs",
+      "description": "Multi-line text input with auto-resize support.",
+      "displayName": "FlareTextArea",
+      "tags": [
+        "input",
+        "textarea",
+        "text",
+        "form",
+        "multiline"
+      ],
+      "file": "TextArea.md"
+    },
+    {
+      "name": "TextField",
+      "category": "Inputs",
+      "description": "Single-line text input field with label, placeholder, leading/trailing icons, adornments, floating label, character counter, clearable, validation, and Color/Variant/Size controls.",
+      "displayName": "FlareTextField",
+      "tags": [
+        "input",
+        "text",
+        "form",
+        "field",
+        "label",
+        "validation"
+      ],
+      "file": "TextField.md"
+    },
+    {
+      "name": "ThemeProvider",
+      "category": "Theming",
+      "description": "Root component that cascades IThemeService and ThemeSnapshot to all Flare components. Wrap your entire app.",
+      "displayName": "FlareThemeProvider",
+      "tags": [
+        "theme",
+        "provider",
+        "cascade",
+        "root"
+      ],
+      "file": "ThemeProvider.md"
+    },
+    {
+      "name": "ThemeScope",
+      "category": "Theming",
+      "description": "Scoped theme override for a section of the page with independent tokens.",
+      "displayName": "FlareThemeScope",
+      "tags": [
+        "theme",
+        "scope",
+        "override",
+        "section"
+      ],
+      "file": "ThemeScope.md"
+    },
+    {
+      "name": "Timeline",
+      "category": "DataDisplay",
+      "description": "Vertical timeline with themed dots, connectors, and content panels.",
+      "displayName": "FlareTimeline",
+      "tags": [
+        "timeline",
+        "history",
+        "events",
+        "log",
+        "chronological"
+      ],
+      "file": "Timeline.md"
+    },
+    {
+      "name": "TimePicker",
+      "category": "Inputs",
+      "description": "Time picker with clock dial or text input, AM/PM support.",
+      "displayName": "FlareTimePicker",
+      "tags": [
+        "timepicker",
+        "time",
+        "clock",
+        "input",
+        "form"
+      ],
+      "file": "TimePicker.md"
+    },
+    {
+      "name": "ToggleButton",
+      "category": "Buttons",
+      "description": "Button that toggles between selected and unselected states.",
+      "displayName": "FlareToggleButton",
+      "tags": [
+        "button",
+        "toggle",
+        "select",
+        "toolbar"
+      ],
+      "file": "ToggleButton.md"
+    },
+    {
+      "name": "ToggleGroup",
+      "category": "Buttons",
+      "description": "Group of toggle buttons where only one (or multiple) can be selected at a time.",
+      "displayName": "FlareToggleGroup",
+      "tags": [
+        "button",
+        "toggle",
+        "group",
+        "toolbar",
+        "selection"
+      ],
+      "file": "ToggleGroup.md"
+    },
+    {
+      "name": "Toolbar",
+      "category": "Navigation",
+      "description": "Horizontal toolbar with groups of buttons, separators, and icons.",
+      "displayName": "FlareToolbar",
+      "tags": [
+        "toolbar",
+        "actions",
+        "buttons",
+        "bar"
+      ],
+      "file": "Toolbar.md"
+    },
+    {
+      "name": "ToolPanel",
+      "category": "IDE",
+      "description": "Dockable tool panel for IDE layouts like Solution Explorer. Separate package: Flare.Components.IDE.",
+      "displayName": "FlareToolPanel",
+      "tags": [
+        "tool",
+        "panel",
+        "dock",
+        "ide",
+        "sidebar"
+      ],
+      "file": "ToolPanel.md"
+    },
+    {
+      "name": "Tooltip",
+      "category": "Overlays",
+      "description": "Tooltip overlay that shows contextual help text on hover or focus.",
+      "displayName": "FlareTooltip",
+      "tags": [
+        "tooltip",
+        "help",
+        "hint",
+        "overlay",
+        "popup"
+      ],
+      "file": "Tooltip.md"
+    },
+    {
+      "name": "Transfer",
+      "category": "Inputs",
+      "description": "Dual list transfer component for moving items between two lists. Separate package: Flare.Components.Transfer.",
+      "displayName": "FlareTransfer",
+      "tags": [
+        "transfer",
+        "dual-list",
+        "shuttle",
+        "move"
+      ],
+      "file": "Transfer.md"
+    },
+    {
+      "name": "TreeView",
+      "category": "DataDisplay",
+      "description": "Hierarchical tree view with expand/collapse, checkboxes, drag-and-drop, and lazy loading.",
+      "displayName": "FlareTreeView",
+      "tags": [
+        "data",
+        "tree",
+        "hierarchy",
+        "folder",
+        "expand",
+        "collapse"
+      ],
+      "file": "TreeView.md"
+    },
+    {
+      "name": "ValidationSummary",
+      "category": "Inputs",
+      "description": "Displays validation error messages from the EditContext in a themed alert block.",
+      "displayName": "FlareValidationSummary",
+      "tags": [
+        "validation",
+        "errors",
+        "summary",
+        "form"
+      ],
+      "file": "ValidationSummary.md"
+    },
+    {
+      "name": "VideoPlayer",
+      "category": "Display",
+      "description": "Video player with controls, poster, and streaming support. Separate package: Flare.Components.Media.",
+      "displayName": "FlareVideoPlayer",
+      "tags": [
+        "video",
+        "player",
+        "media",
+        "stream"
+      ],
+      "file": "VideoPlayer.md"
+    },
+    {
+      "name": "VirtualList",
+      "category": "DataDisplay",
+      "description": "Virtualized scrolling list that only renders visible items for performance.",
+      "displayName": "FlareVirtualList",
+      "tags": [
+        "virtualization",
+        "list",
+        "scroll",
+        "performance",
+        "large-data"
+      ],
+      "file": "VirtualList.md"
+    }
+  ],
+  "categories": [
+    "Buttons",
+    "DataDisplay",
+    "Display",
+    "Feedback",
+    "IDE",
+    "Inputs",
+    "Layout",
+    "Navigation",
+    "Overlays",
+    "Theming"
+  ]
+}

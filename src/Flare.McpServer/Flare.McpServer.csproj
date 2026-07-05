@@ -9,7 +9,7 @@
     <PackageId>FlareUI.McpServer</PackageId>
     <Version>1.0.0</Version>
     <Authors>FlareUI</Authors>
-    <Description>MCP server for Flare Blazor component library. Provides tools and resources for AI assistants to query component docs, generate code, and access theming info.</Description>
+    <Description>MCP server for Flare Blazor component library. Provides tools and resources for AI assistants to query component docs, search components by keyword, and access theming info. All 116 component APIs served as markdown.</Description>
     <PackageTags>mcp;flare;blazor;ai;components</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/jrfrigat/Flare</RepositoryUrl>
@@ -25,7 +25,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Data\Components\*.json" />
+    <EmbeddedResource Include="Data\Components\*.md" />
+    <EmbeddedResource Include="Data\Components\_index.json" />
     <EmbeddedResource Include="Data\Docs\*.md" />
   </ItemGroup>
 

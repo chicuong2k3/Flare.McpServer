@@ -1,5 +1,4 @@
 using System.ComponentModel;
-using System.Text.Json;
 using Flare.McpServer.Data;
 using ModelContextProtocol.Server;
 
@@ -8,18 +7,17 @@ namespace Flare.McpServer.Tools;
 [McpServerToolType]
 public sealed class GetComponentTool
 {
-    [McpServerTool, Description("Get full API reference and documentation for a Flare component including parameters, events, sub-components, usage examples, and detailed docs.")]
+    [McpServerTool, Description("Get full API reference and documentation for a Flare component as markdown.")]
     public static string GetComponent(
-        ComponentCatalog catalog,
+        ComponentIndex index,
         ComponentDocs docs,
-        [Description("Component name (case-insensitive). Examples: Button, DataGrid, Card, Select, TextField")] string name,
-        [Description("Include full documentation markdown. Default: true")] bool includeDocs = true)
+        [Description("Component name (case-insensitive). Examples: Button, DataGrid, Card, Select, TextField")] string name)
     {
-        var component = catalog.GetByName(name);
+        var entry = index.GetByName(name);
 
-        if (component is null)
+        if (entry is null)
         {
-            var suggestions = catalog.GetAll()
+            var suggestions = index.GetAll()
                 .Where(c => c.Name.Contains(name, StringComparison.OrdinalIgnoreCase))
                 .Select(c => c.Name)
                 .Take(5)
@@ -31,33 +29,10 @@ public sealed class GetComponentTool
             else
                 message += " Use list_components to see all available components.";
 
-            return JsonSerializer.Serialize(new { error = message },
-                new JsonSerializerOptions { WriteIndented = true });
-        }
-
-        if (!includeDocs)
-        {
-            return JsonSerializer.Serialize(component, new JsonSerializerOptions { WriteIndented = true });
+            return message;
         }
 
         var doc = docs.GetDoc(name);
-
-        var result = new
-        {
-            component.Name,
-            component.DisplayName,
-            component.Category,
-            component.Description,
-            component.Parameters,
-            component.Events,
-            component.SubComponents,
-            component.Examples,
-            component.Tags,
-            Documentation = doc ?? $"No detailed documentation available for {name}.",
-            component.DocUrl,
-            component.ApiUrl
-        };
-
-        return JsonSerializer.Serialize(result, new JsonSerializerOptions { WriteIndented = true });
+        return doc ?? $"# {entry.DisplayName}\n\n{entry.Description}\n\n*No detailed documentation available.*";
     }
 }
