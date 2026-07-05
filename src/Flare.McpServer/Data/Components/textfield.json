@@ -2,34 +2,46 @@
   "name": "TextField",
   "displayName": "FlareTextField",
   "category": "Inputs",
-  "description": "Text input field with label, placeholder, validation, and icon support.",
+  "description": "Single-line text input field with label, placeholder, leading/trailing icons, adornments, floating label, character counter, clearable, validation, and Color/Variant/Size controls.",
   "docUrl": "https://github.com/jrfrigat/Flare/blob/main/docs/en/ai-agents.md",
-  "apiUrl": "https://jrfrigat.github.io/Flare/api/FlareTextField.html",
+  "apiUrl": "https://jrfrigat.github.io/Flare/api/Flare.Components.FlareTextField.html",
   "parameters": [
-    { "name": "Value", "type": "string", "description": "Gets or sets the input value", "default": "", "required": false },
-    { "name": "ValueChanged", "type": "EventCallback<string>", "description": "Callback when value changes", "default": "", "required": false },
-    { "name": "Label", "type": "string", "description": "Label text displayed above the input", "default": "", "required": false },
-    { "name": "Placeholder", "type": "string", "description": "Placeholder text when input is empty", "default": "", "required": false },
-    { "name": "Color", "type": "FlareColor", "description": "Color of the input (semantic role or custom)", "default": "Default", "required": false },
-    { "name": "Variant", "type": "Variant", "description": "Visual variant of the field", "default": "Outlined", "required": false },
-    { "name": "Disabled", "type": "bool", "description": "Whether the input is disabled", "default": "false", "required": false },
-    { "name": "ReadOnly", "type": "bool", "description": "Whether the input is read-only", "default": "false", "required": false },
-    { "name": "Required", "type": "bool", "description": "Whether the input is required", "default": "false", "required": false },
-    { "name": "Icon", "type": "string", "description": "Material icon name to display", "default": "", "required": false },
-    { "name": "MaxLength", "type": "int?", "description": "Maximum number of characters allowed", "default": "", "required": false },
-    { "name": "HelperText", "type": "string", "description": "Helper text displayed below the input", "default": "", "required": false },
-    { "name": "AutoFocus", "type": "bool", "description": "Whether to auto-focus the input on page load", "default": "false", "required": false }
+    { "name": "Value", "type": "string?", "description": "Current value of the input. Supports @bind-Value.", "default": "", "required": false },
+    { "name": "Label", "type": "string?", "description": "Label text shown for the field.", "default": "", "required": false },
+    { "name": "Placeholder", "type": "string?", "description": "Placeholder when field is empty.", "default": "", "required": false },
+    { "name": "HelperText", "type": "string?", "description": "Helper text shown below the field.", "default": "", "required": false },
+    { "name": "ErrorText", "type": "string?", "description": "Error text; overrides HelperText and marks field invalid.", "default": "", "required": false },
+    { "name": "Color", "type": "FlareColor", "description": "Semantic color for the focus/active border.", "default": "Default", "required": false },
+    { "name": "Variant", "type": "InputVariant", "description": "Visual variant: Default, Filled, Outlined.", "default": "Default", "required": false },
+    { "name": "Size", "type": "FieldSize", "description": "Control size: Xs..Xl. Medium is default.", "default": "Md", "required": false },
+    { "name": "Disabled", "type": "bool", "description": "Disables the field (no input, dimmed).", "default": "false", "required": false },
+    { "name": "ReadOnly", "type": "bool", "description": "Makes field read-only.", "default": "false", "required": false },
+    { "name": "Required", "type": "bool", "description": "Marks field as required (visual + native).", "default": "false", "required": false },
+    { "name": "LeadingIcon", "type": "RenderFragment?", "description": "Icon rendered inside the leading edge of the input.", "default": "", "required": false },
+    { "name": "TrailingIcon", "type": "RenderFragment?", "description": "Icon rendered inside the trailing edge of the input.", "default": "", "required": false },
+    { "name": "AdornmentStart", "type": "RenderFragment?", "description": "Leading adornment (e.g. currency symbol, prefix).", "default": "", "required": false },
+    { "name": "AdornmentEnd", "type": "RenderFragment?", "description": "Trailing adornment (e.g. unit label, suffix).", "default": "", "required": false },
+    { "name": "FloatingLabel", "type": "bool", "description": "Animated floating label that moves above input on focus.", "default": "false", "required": false },
+    { "name": "MaxLength", "type": "int", "description": "Max characters allowed. 0 = no limit.", "default": "0", "required": false },
+    { "name": "Clearable", "type": "bool", "description": "Shows clear (x) button when non-empty.", "default": "false", "required": false },
+    { "name": "ShowCharacterCount", "type": "bool", "description": "Shows character counter in supporting-text row.", "default": "false", "required": false },
+    { "name": "FullWidth", "type": "bool", "description": "When true fills container width; false = content-sized.", "default": "true", "required": false },
+    { "name": "Margin", "type": "FieldMargin", "description": "Vertical margin: None, Dense, Normal.", "default": "None", "required": false },
+    { "name": "Typo", "type": "TypographyScale?", "description": "Optional typography scale override for input text.", "default": "", "required": false },
+    { "name": "Immediate", "type": "bool", "description": "Update on every keystroke (oninput) vs on change/blur.", "default": "false", "required": false },
+    { "name": "DebounceInterval", "type": "int", "description": "Debounce ms for Immediate updates. 0 = no debounce.", "default": "0", "required": false },
+    { "name": "For", "type": "Expression<Func<TValue>>?", "description": "Expression to bind and validate against EditContext.", "default": "", "required": false },
+    { "name": "Error", "type": "bool", "description": "Forces error visual state without a message.", "default": "false", "required": false }
   ],
   "events": [
-    { "name": "OnChange", "type": "EventCallback<string>", "description": "Fired when the value changes" },
-    { "name": "OnBlur", "type": "EventCallback<FocusEventArgs>", "description": "Fired when the input loses focus" },
-    { "name": "OnFocus", "type": "EventCallback<FocusEventArgs>", "description": "Fired when the input gains focus" },
-    { "name": "OnKeyDown", "type": "EventCallback<KeyboardEventArgs>", "description": "Fired when a key is pressed" }
+    { "name": "OnKeyDown", "type": "EventCallback<KeyboardEventArgs>", "description": "Invoked on keydown in the input." },
+    { "name": "OnKeyUp", "type": "EventCallback<KeyboardEventArgs>", "description": "Invoked on keyup in the input." }
   ],
   "subComponents": [],
   "examples": [
-    "<FlareTextField @bind-Value=\"_name\" Label=\"Name\" />",
-    "<FlareTextField @bind-Value=\"_email\" Label=\"Email\" Placeholder=\"user@domain.com\" Icon=\"email\" />"
+    "<FlareTextField @bind-Value=\"_name\" Label=\"Name\" Placeholder=\"Enter your name\" />",
+    "<FlareTextField @bind-Value=\"_email\" Label=\"Email\" LeadingIcon=\"@emailIcon\" Clearable=\"true\" />",
+    "<FlareTextField @bind-Value=\"_amount\" Label=\"Amount\" AdornmentStart=\"@dollarIcon\" />"
   ],
-  "tags": ["input", "text", "form", "field", "label"]
+  "tags": ["input", "text", "form", "field", "label", "validation"]
 }

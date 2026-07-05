@@ -2,30 +2,32 @@
   "name": "Select",
   "displayName": "FlareSelect",
   "category": "Inputs",
-  "description": "Dropdown select component with search, multi-select, and virtualization support.",
+  "description": "Single-value dropdown select with search, grouping, virtualization, declarative <option> parsing, ItemTemplate/ValueTemplate, and full field chrome (label, helper, validation).",
   "docUrl": "https://github.com/jrfrigat/Flare/blob/main/docs/en/ai-agents.md",
-  "apiUrl": "https://jrfrigat.github.io/Flare/api/FlareSelect.html",
+  "apiUrl": "https://jrfrigat.github.io/Flare/api/Flare.Components.FlareSelect-1.html",
   "parameters": [
-    { "name": "Value", "type": "TValue", "description": "Gets or sets the selected value", "default": "", "required": false },
-    { "name": "ValueChanged", "type": "EventCallback<TValue>", "description": "Callback when selection changes", "default": "", "required": false },
-    { "name": "Items", "type": "IEnumerable<TValue>", "description": "Collection of items to select from", "default": "", "required": true },
-    { "name": "Label", "type": "string", "description": "Label text", "default": "", "required": false },
-    { "name": "Placeholder", "type": "string", "description": "Placeholder when nothing is selected", "default": "", "required": false },
-    { "name": "Color", "type": "FlareColor", "description": "Color of the select", "default": "Default", "required": false },
-    { "name": "Variant", "type": "Variant", "description": "Visual variant", "default": "Outlined", "required": false },
-    { "name": "Disabled", "type": "bool", "description": "Whether the select is disabled", "default": "false", "required": false },
-    { "name": "Searchable", "type": "bool", "description": "Enable search/filter within the dropdown", "default": "false", "required": false },
-    { "name": "Clearable", "type": "bool", "description": "Show a clear button to reset selection", "default": "false", "required": false },
-    { "name": "ItemTemplate", "type": "RenderFragment<TValue>", "description": "Template for custom item rendering", "default": "", "required": false },
-    { "name": "ValueTemplate", "type": "RenderFragment<TValue>", "description": "Template for selected value rendering", "default": "", "required": false }
+    { "name": "Value", "type": "TValue?", "description": "Currently selected item value. Supports @bind-Value.", "default": "", "required": false },
+    { "name": "Label", "type": "string?", "description": "Label text shown for the field.", "default": "", "required": false },
+    { "name": "Placeholder", "type": "string?", "description": "Placeholder when nothing is selected.", "default": "", "required": false },
+    { "name": "HelperText", "type": "string?", "description": "Helper text shown below the field.", "default": "", "required": false },
+    { "name": "Color", "type": "FlareColor", "description": "Semantic color for focus/active border.", "default": "Default", "required": false },
+    { "name": "Variant", "type": "InputVariant", "description": "Visual variant: Default, Filled, Outlined.", "default": "Default", "required": false },
+    { "name": "Size", "type": "FieldSize", "description": "Control size: Xs..Xl.", "default": "Md", "required": false },
+    { "name": "Disabled", "type": "bool", "description": "Disables the select.", "default": "false", "required": false },
+    { "name": "Required", "type": "bool", "description": "Marks as required.", "default": "false", "required": false },
+    { "name": "FullWidth", "type": "bool", "description": "Fills container width when true.", "default": "true", "required": false },
+    { "name": "For", "type": "Expression<Func<TValue>>?", "description": "Expression for EditContext binding.", "default": "", "required": false },
+    { "name": "ChildContent", "type": "RenderFragment?", "description": "Declarative <option value=\"x\">Label</option> items or custom content.", "default": "", "required": false },
+    { "name": "ItemTemplate", "type": "RenderFragment<TValue>?", "description": "Custom template for dropdown items.", "default": "", "required": false },
+    { "name": "ValueTemplate", "type": "RenderFragment<TValue>?", "description": "Custom template for selected value display.", "default": "", "required": false },
+    { "name": "Searchable", "type": "bool", "description": "Show search input inside dropdown.", "default": "false", "required": false },
+    { "name": "Clearable", "type": "bool", "description": "Show clear button to reset selection.", "default": "false", "required": false }
   ],
-  "events": [
-    { "name": "OnChange", "type": "EventCallback<TValue>", "description": "Fired when the selection changes" }
-  ],
+  "events": [],
   "subComponents": [],
   "examples": [
-    "<FlareSelect @bind-Value=\"_role\" Label=\"Role\" Items=\"_roles\" />",
-    "<FlareSelect @bind-Value=\"_color\" Label=\"Color\" Items=\"_colors\" Searchable=\"true\" Clearable=\"true\" />"
+    "<FlareSelect @bind-Value=\"_role\" Label=\"Role\" Searchable=\"true\" Clearable=\"true\">\n    <option value=\"admin\">Administrator</option>\n    <option value=\"user\">User</option>\n</FlareSelect>",
+    "<FlareSelect @bind-Value=\"_color\" Label=\"Color\" Items=\"_colors\" />"
   ],
-  "tags": ["input", "select", "dropdown", "form", "choice"]
+  "tags": ["input", "select", "dropdown", "form", "choice", "combobox"]
 }

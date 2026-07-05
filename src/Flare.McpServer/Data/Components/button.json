@@ -2,31 +2,39 @@
   "name": "Button",
   "displayName": "FlareButton",
   "category": "Buttons",
-  "description": "Highly customizable button with variants, icons, loading state, and color support.",
+  "description": "Highly customizable button with five visual variants (Filled/Outlined/Text/Elevated/Tonal), leading/trailing icons, loading state with spinner, link mode via Href, press-morph animation, and color support via FlareColor.",
   "docUrl": "https://github.com/jrfrigat/Flare/blob/main/docs/en/ai-agents.md",
-  "apiUrl": "https://jrfrigat.github.io/Flare/api/FlareButton.html",
+  "apiUrl": "https://jrfrigat.github.io/Flare/api/Flare.Components.FlareButton.html",
   "parameters": [
-    { "name": "ChildContent", "type": "RenderFragment", "description": "Button content (text or markup)", "default": "", "required": false },
-    { "name": "Variant", "type": "ButtonVariant", "description": "Appearance style of the button", "default": "Filled", "required": false },
-    { "name": "Color", "type": "FlareColor", "description": "Color of the button", "default": "Default", "required": false },
-    { "name": "Size", "type": "Size", "description": "Size of the button", "default": "Md", "required": false },
-    { "name": "Type", "type": "ButtonType", "description": "HTML button type", "default": "Button", "required": false },
-    { "name": "Disabled", "type": "bool", "description": "Whether the button is disabled", "default": "false", "required": false },
-    { "name": "Loading", "type": "bool", "description": "Shows a loading spinner", "default": "false", "required": false },
-    { "name": "Icon", "type": "string", "description": "Material icon name to display", "default": "", "required": false },
-    { "name": "IconPosition", "type": "IconPosition", "description": "Position of the icon relative to text", "default": "Start", "required": false },
-    { "name": "FullWidth", "type": "bool", "description": "Whether the button stretches to full width", "default": "false", "required": false },
-    { "name": "Href", "type": "string", "description": "URL to navigate to (renders as anchor)", "default": "", "required": false },
-    { "name": "Target", "type": "string", "description": "Target for Href navigation", "default": "", "required": false }
+    { "name": "ChildContent", "type": "RenderFragment?", "description": "Button label and inner content.", "default": "", "required": false },
+    { "name": "LeadingIcon", "type": "RenderFragment?", "description": "Icon rendered before the button label.", "default": "", "required": false },
+    { "name": "TrailingIcon", "type": "RenderFragment?", "description": "Icon rendered after the button label.", "default": "", "required": false },
+    { "name": "Variant", "type": "ButtonVariant", "description": "Visual style variant: Filled, Outlined, Text, Elevated, Tonal.", "default": "Filled", "required": false },
+    { "name": "Size", "type": "ButtonSize", "description": "Size: Xs, Sm, Md, Lg, Xl.", "default": "Md", "required": false },
+    { "name": "Shape", "type": "ButtonShape", "description": "Corner shape: Default (theme native), Rounded, Circular, Square.", "default": "Default", "required": false },
+    { "name": "Typo", "type": "TypographyScale?", "description": "Overrides label typography. Null keeps size default.", "default": "", "required": false },
+    { "name": "Color", "type": "FlareColor", "description": "Button color. Semantic preset or Custom(\"#FF0000\").", "default": "Default", "required": false },
+    { "name": "OnColor", "type": "string?", "description": "Optional foreground color for filled variant when Color is custom.", "default": "", "required": false },
+    { "name": "Disabled", "type": "bool", "description": "Disables the button when true.", "default": "false", "required": false },
+    { "name": "Type", "type": "ButtonType", "description": "HTML button type: Button, Submit, Reset.", "default": "Button", "required": false },
+    { "name": "Loading", "type": "bool", "description": "Shows a spinner and disables the button when true.", "default": "false", "required": false },
+    { "name": "LoadingText", "type": "string?", "description": "Replaces button label text while Loading is true.", "default": "", "required": false },
+    { "name": "PressMorph", "type": "bool", "description": "Opt-in: corner radius animates while pressed.", "default": "false", "required": false },
+    { "name": "FullWidth", "type": "bool", "description": "Stretches button to full container width.", "default": "false", "required": false },
+    { "name": "Href", "type": "string?", "description": "When set, renders as a link <a> to this URL.", "default": "", "required": false },
+    { "name": "Target", "type": "string?", "description": "Target for link button (e.g. _blank). Only with Href.", "default": "", "required": false },
+    { "name": "AriaLabel", "type": "string?", "description": "Accessible label, forwarded as aria-label.", "default": "", "required": false },
+    { "name": "AriaPressed", "type": "bool", "description": "Indicates pressed state for toggle buttons.", "default": "false", "required": false }
   ],
   "events": [
-    { "name": "OnClick", "type": "EventCallback<MouseEventArgs>", "description": "Fired when the button is clicked" }
+    { "name": "OnClick", "type": "EventCallback<MouseEventArgs>", "description": "Callback invoked when the button is clicked." }
   ],
   "subComponents": [],
   "examples": [
     "<FlareButton Variant=\"ButtonVariant.Filled\" OnClick=\"Save\">Save</FlareButton>",
-    "<FlareButton Variant=\"ButtonVariant.Outlined\" Icon=\"delete\" Color=\"FlareColor.Error\">Delete</FlareButton>",
-    "<FlareButton Variant=\"ButtonVariant.Filled\" Loading=\"true\">Saving...</FlareButton>"
+    "<FlareButton Variant=\"ButtonVariant.Outlined\" LeadingIcon=\"@DeleteIcon\">Delete</FlareButton>",
+    "<FlareButton Variant=\"ButtonVariant.Filled\" Loading=\"true\" LoadingText=\"Saving...\">Save</FlareButton>",
+    "<FlareButton Href=\"/docs\" Variant=\"ButtonVariant.Text\">Docs</FlareButton>"
   ],
-  "tags": ["button", "action", "click", "form", "submit", "icon"]
+  "tags": ["button", "action", "click", "form", "submit", "icon", "link"]
 }
