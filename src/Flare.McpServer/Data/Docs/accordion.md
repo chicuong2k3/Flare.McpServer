@@ -1,6 +1,23 @@
-# FlareAccordion
+# FlareAccordion API
 
-Expandable accordion with single/multi expand modes.
+> Inherits `FlareComponentBase`  
+> Source: [FlareAccordion.razor](https://github.com/jrfrigat/Flare/blob/main/src/Flare.Components/Accordion/FlareAccordion.razor)
+
+## Parameters
+
+| Name | Type | Default | Description |
+|------|------|---------|-------------|
+| `ChildContent` | `RenderFragment?` | — | `FlareAccordionPanel` children. |
+| `ExpandMode` | `SelectionMode` | `Single` | Single or Multiple expansion. |
+
+## Sub-component: FlareAccordionPanel
+
+| Name | Type | Description |
+|------|------|-------------|
+| `Title` | `string?` | Panel header text. |
+| `Icon` | `string?` | Optional header icon. |
+| `ChildContent` | `RenderFragment?` | Panel body content. |
+| `Expanded` | `bool` | Expanded state. `@bind-Expanded`. |
 
 ```razor
 <FlareAccordion>
@@ -8,7 +25,3 @@ Expandable accordion with single/multi expand modes.
     <FlareAccordionPanel Title="Section 2">Content 2</FlareAccordionPanel>
 </FlareAccordion>
 ```
-
-## Key Parameters
-- `ExpandMode` - Single or Multiple
-- `Color` - `FlareColor` for expand icon

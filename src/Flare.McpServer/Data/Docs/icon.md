@@ -1,17 +1,25 @@
-# FlareIcon
+# FlareIcon API
 
-Material Symbols icon with configurable size, fill, weight, and grade.
+> Inherits `FlareComponentBase`  
+> Source: [FlareIcon.razor](https://github.com/jrfrigat/Flare/blob/main/src/Flare.Components/Icon/FlareIcon.razor)
+
+## Parameters
+
+| Name | Type | Default | Description |
+|------|------|---------|-------------|
+| `Name` | `string?` | — | Material icon name or FlareIcons constant. |
+| `Icon` | `RenderFragment?` | — | Custom SVG icon content (overrides Name). |
+| `Size` | `FlareSize?` | — | Size preset. |
+| `Color` | `FlareColor` | `Default` | Icon color. |
+
+## Events
+
+| Name | Type | Description |
+|------|------|-------------|
+| `OnClick` | `EventCallback<MouseEventArgs>` | Click handler. |
 
 ```razor
 <FlareIcon Name="search" />
-<FlareIcon Name="favorite" Color="FlareColor.Error" Fill="true" />
-<FlareIcon Name="settings" Size="Size.Lg" OnClick="OpenSettings" />
+<FlareIcon Name="favorite" Color="FlareColor.Error" />
+<FlareIcon Name="@FlareIcons.Home" Size="FlareSize.Lg" />
 ```
-
-## Key Parameters
-- `Name` - Material icon name (required)
-- `Size` - Xs to Xl
-- `Color` - `FlareColor`
-- `Fill` - use filled style
-- `Weight` - 100-700
-- `Grade` - -50 to 200

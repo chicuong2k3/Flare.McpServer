@@ -1,17 +1,29 @@
-# FlareAlert
+# FlareAlert API
 
-Alert for important messages with severity levels and dismissible support.
+> Inherits `FlareComponentBase`  
+> Source: [FlareAlert.razor](https://github.com/jrfrigat/Flare/blob/main/src/Flare.Components/Alert/FlareAlert.razor) | [API Reference](https://jrfrigat.github.io/Flare/api/Flare.Components.FlareAlert.html)
+
+## Parameters
+
+| Name | Type | Default | Description |
+|------|------|---------|-------------|
+| `ChildContent` | `RenderFragment?` | — | Body content rendered below title. |
+| `Title` | `string?` | — | Bold title above body. |
+| `Severity` | `AlertSeverity` | `Info` | Severity level controlling color and icon. |
+| `Variant` | `AlertVariant` | `Filled` | Visual display: Filled, Outlined, Text. |
+| `Icon` | `RenderFragment?` | — | Custom icon (overrides severity default). |
+| `NoIcon` | `bool` | `false` | Hides leading icon entirely. |
+| `Dismissible` | `bool` | `false` | Show close button. |
+| `AnimateDismiss` | `bool` | `true` | Fade-out + slide-up animation on dismiss. |
+
+## Events
+
+| Name | Type | Description |
+|------|------|-------------|
+| `OnClose` | `EventCallback` | Fired when close button clicked. |
+| `OnDismiss` | `EventCallback` | Fired when alert dismissed. |
 
 ```razor
-<FlareAlert Severity="Severity.Success">Operation completed!</FlareAlert>
-<FlareAlert Severity="Severity.Error" Title="Error" Dismissible="true">Something went wrong.</FlareAlert>
+<FlareAlert Severity="AlertSeverity.Success">Operation completed!</FlareAlert>
+<FlareAlert Severity="AlertSeverity.Error" Title="Error" Dismissible="true">Something went wrong.</FlareAlert>
 ```
-
-## Severity Levels
-- `Severity.Info`, `Severity.Success`, `Severity.Warning`, `Severity.Error`
-
-## Key Parameters
-- `Title` - optional heading
-- `Icon` - custom icon (auto-selected by severity)
-- `Dismissible` - show close button
-- `Outlined` - outlined style

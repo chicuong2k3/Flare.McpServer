@@ -1,26 +1,27 @@
-# FlareAppBar
+# FlareAppBar API
 
-Top app bar with navigation toggle, title, actions, and sticky behavior.
+> Inherits `FlareComponentBase`  
+> Source: [FlareAppBar.razor](https://github.com/jrfrigat/Flare/blob/main/src/Flare.Components/AppBar/FlareAppBar.razor) | [API Reference](https://jrfrigat.github.io/Flare/api/Flare.Components.FlareAppBar.html)
+
+## Parameters
+
+| Name | Type | Default | Description |
+|------|------|---------|-------------|
+| `Title` | `string?` | — | Plain-text title. |
+| `TitleContent` | `RenderFragment?` | — | Custom title area content. |
+| `Leading` | `RenderFragment?` | — | Left edge content (menu toggle). |
+| `Trailing` | `RenderFragment?` | — | Right edge content (actions). |
+| `Elevation` | `int` | `4` | Shadow level 0-5. |
+| `Dense` | `bool` | `false` | Reduced height. |
+| `Sticky` | `bool` | `false` | Stick to top of viewport. |
+| `AriaLabel` | `string?` | — | Header landmark label. |
 
 ```razor
 <FlareAppBar Title="Dashboard" Sticky="true">
-    <NavigationTemplate>
-        <FlareButton Icon="menu" OnClick="ToggleDrawer" />
-    </NavigationTemplate>
-    <ActionsTemplate>
+    <Leading><FlareButton Icon="menu" OnClick="ToggleDrawer" /></Leading>
+    <Trailing>
         <FlareButton Icon="notifications" />
-        <FlareAvatar Src="/avatar.png" Size="Size.Sm" />
-    </ActionsTemplate>
+        <FlareAvatar Src="/avatar.png" Size="AvatarSize.Sm" />
+    </Trailing>
 </FlareAppBar>
 ```
-
-## Key Parameters
-- `Title` - app bar title text
-- `Sticky` - stick to top on scroll
-- `Elevation` - shadow depth (0-6)
-- `Color` - `FlareColor` for background
-
-## Templates
-- `NavigationTemplate` - menu toggle area (start)
-- `ActionsTemplate` - action buttons (end)
-- `TitleTemplate` - custom title content

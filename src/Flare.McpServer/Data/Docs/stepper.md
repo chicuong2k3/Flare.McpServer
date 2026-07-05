@@ -1,16 +1,29 @@
-# FlareStepper
+# FlareStepper API
 
-Multi-step wizard with linear/non-linear progression.
+> Inherits `FlareComponentBase`  
+> Source: [FlareStepper.razor](https://github.com/jrfrigat/Flare/blob/main/src/Flare.Components/Stepper/FlareStepper.razor)
+
+## Parameters
+
+| Name | Type | Default | Description |
+|------|------|---------|-------------|
+| `ChildContent` | `RenderFragment?` | — | `FlareStep` children. |
+| `ActiveIndex` | `int` | 0 | Current step. `@bind-ActiveIndex`. |
+| `Orientation` | `StepperOrientation` | `Horizontal` | Horizontal or Vertical. |
+| `OnStepChanging` | `EventCallback<StepperChange>` | — | Guard: set Cancel to veto step change. |
+
+## Sub-component: FlareStep
+
+| Name | Type | Description |
+|------|------|-------------|
+| `Title` | `string` | Step label. |
+| `Icon` | `string?` | Optional icon. |
+| `ChildContent` | `RenderFragment?` | Step body content. |
+| `Optional` | `bool` | Mark as optional. |
 
 ```razor
-<FlareStepper @bind-ActiveStep="_step" Linear="true">
-    <FlareStep Title="Personal">Name and email</FlareStep>
-    <FlareStep Title="Details">Address info</FlareStep>
-    <FlareStep Title="Confirm">Review and submit</FlareStep>
+<FlareStepper @bind-ActiveIndex="_step">
+    <FlareStep Title="Details" Icon="person">Name and email fields</FlareStep>
+    <FlareStep Title="Confirm" Icon="check">Review and submit</FlareStep>
 </FlareStepper>
 ```
-
-## Key Parameters
-- `ActiveStep` / `@bind-ActiveStep` - current step index
-- `Linear` - force sequential progression
-- `Color` - `FlareColor` for step indicators

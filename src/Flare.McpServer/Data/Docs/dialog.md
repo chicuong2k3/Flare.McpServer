@@ -1,44 +1,48 @@
-# FlareDialog
+# FlareDialog API
 
-Modal dialog with service-based and component-based invocation.
+> Inherits `FlareComponentBase`  
+> Source: [FlareDialog.razor](https://github.com/jrfrigat/Flare/blob/main/src/Flare.Components/Dialog/FlareDialog.razor) | [API Reference](https://jrfrigat.github.io/Flare/api/Flare.Components.FlareDialog.html)
 
-## Service-based (recommended)
-```razor
+## Parameters
+
+| Name | Type | Default | Description |
+|------|------|---------|-------------|
+| `ChildContent` | `RenderFragment?` | — | Main body content. |
+| `Title` | `string?` | — | Title text in header. |
+| `Icon` | `RenderFragment?` | — | Hero icon centered above title. |
+| `Actions` | `RenderFragment?` | — | Action buttons in footer. |
+| `Visible` | `bool` | `false` | Dialog visibility. `@bind-Visible`. |
+| `Size` | `string?` | — | Max width (Sm, Md, Lg, or CSS value). |
+| `CloseOnScrimClick` | `bool` | `true` | Close on backdrop click. |
+| `CloseOnEsc` | `bool` | `true` | Close on Escape key. |
+| `Divider` | `bool` | `false` | Divider between header and content. |
+| `AriaLabel` | `string?` | — | Accessible name when Title empty. |
+
+## Service-based (IDialogService)
+
+```csharp
 @inject IDialogService Dialog
 
-<!-- Place providers once in layout -->
-<FlareDialogProvider />
-<FlareMessageBoxProvider />
+// Simple confirm
+var ok = await Dialog.ConfirmAsync("Delete", "Cannot undo.", "Delete", "Cancel");
 
-@code {
-    // Simple confirm
-    var ok = await Dialog.ConfirmAsync("Delete record", "This cannot be undone.", "Delete", "Cancel");
-
-    // Custom component dialog
-    var result = await Dialog.ShowAsync<EditDialog>("Edit profile", parameters,
-        new DialogOptions { Size = DialogSize.Sm });
-}
+// Custom component
+var result = await Dialog.ShowAsync<EditDialog>("Edit", parameters,
+    new DialogOptions { Size = DialogSize.Sm });
 ```
 
-## Dialog body component
-```razor
-@code {
-    [CascadingParameter] public FlareDialogInstance Dialog { get; set; } = default!;
-
-    private void Save() => Dialog.Close(_edited);   // confirm with payload
-    private void Cancel() => Dialog.Cancel();        // dismiss
-}
+Dialog body closes via cascaded `FlareDialogInstance`:
+```csharp
+[CascadingParameter] public FlareDialogInstance Dialog { get; set; }
+private void Save() => Dialog.Close(_edited);
+private void Cancel() => Dialog.Cancel();
 ```
 
 ## Component-based
+
 ```razor
-<FlareDialog @bind-Visible="_open" Title="Confirm" Size="DialogSize.Sm">
+<FlareDialog @bind-Visible="_open" Title="Confirm" Size="Sm">
     <p>Are you sure?</p>
-    <FlareButton OnClick="Confirm">Yes</FlareButton>
+    <Actions><FlareButton OnClick="Confirm">Yes</FlareButton></Actions>
 </FlareDialog>
 ```
-
-## Key Parameters
-- `Size` - Xs, Sm, Md, Lg, Xl, FullScreen
-- `CloseOnOverlayClick` - close on backdrop click
-- `CloseOnEscape` - close on Escape key
