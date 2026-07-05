@@ -1,0 +1,17 @@
+{
+  "name": "ThemeScope",
+  "displayName": "FlareThemeScope",
+  "category": "Theming",
+  "description": "Scoped theme override for a section of the page with independent tokens.",
+  "docUrl": "https://github.com/jrfrigat/Flare/blob/main/docs/en/ai-agents.md",
+  "apiUrl": "https://jrfrigat.github.io/Flare/api/FlareThemeScope.html",
+  "parameters": [
+    { "name": "ChildContent", "type": "RenderFragment", "description": "Scoped content", "default": "", "required": true },
+    { "name": "Palette", "type": "string", "description": "Override palette for this scope", "default": "", "required": false },
+    { "name": "Mode", "type": "ThemeMode?", "description": "Override mode for this scope", "default": "", "required": false }
+  ],
+  "events": [],
+  "subComponents": [],
+  "examples": ["<FlareThemeScope Palette=\"fluent-blue\" Mode=\"ThemeMode.Dark\">\n    <FlareCard>This card uses Fluent dark theme</FlareCard>\n</FlareThemeScope>"],
+  "tags": ["theme", "scope", "override", "section"]
+}

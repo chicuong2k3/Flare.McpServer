@@ -1,0 +1,22 @@
+{
+  "name": "ColorPicker",
+  "displayName": "FlareColorPicker",
+  "category": "Inputs",
+  "description": "Color picker with preset swatches, custom hex input, and RGB sliders.",
+  "docUrl": "https://github.com/jrfrigat/Flare/blob/main/docs/en/ai-agents.md",
+  "apiUrl": "https://jrfrigat.github.io/Flare/api/FlareColorPicker.html",
+  "parameters": [
+    { "name": "Value", "type": "string", "description": "Selected color hex value", "default": "", "required": false },
+    { "name": "ValueChanged", "type": "EventCallback<string>", "description": "Callback when color changes", "default": "", "required": false },
+    { "name": "Label", "type": "string", "description": "Field label", "default": "", "required": false },
+    { "name": "Presets", "type": "string[]", "description": "Preset color swatches", "default": "", "required": false },
+    { "name": "ShowInput", "type": "bool", "description": "Show hex text input", "default": "true", "required": false },
+    { "name": "ShowSliders", "type": "bool", "description": "Show RGB sliders", "default": "true", "required": false }
+  ],
+  "events": [],
+  "subComponents": [],
+  "examples": [
+    "<FlareColorPicker @bind-Value=\"_color\" Label=\"Brand Color\" />"
+  ],
+  "tags": ["colorpicker", "color", "picker", "input", "form"]
+}

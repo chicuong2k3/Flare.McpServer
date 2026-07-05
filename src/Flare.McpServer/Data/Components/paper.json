@@ -1,0 +1,17 @@
+{
+  "name": "Paper",
+  "displayName": "FlarePaper",
+  "category": "DataDisplay",
+  "description": "Elevated surface panel with shadow and optional outline.",
+  "docUrl": "https://github.com/jrfrigat/Flare/blob/main/docs/en/ai-agents.md",
+  "apiUrl": "https://jrfrigat.github.io/Flare/api/FlarePaper.html",
+  "parameters": [
+    { "name": "ChildContent", "type": "RenderFragment", "description": "Paper content", "default": "", "required": true },
+    { "name": "Elevation", "type": "int", "description": "Shadow depth 0-6", "default": "1", "required": false },
+    { "name": "Outlined", "type": "bool", "description": "Outlined style", "default": "false", "required": false }
+  ],
+  "events": [],
+  "subComponents": [],
+  "examples": ["<FlarePaper Elevation=\"3\" Outlined=\"true\"><FlareText>Content</FlareText></FlarePaper>"],
+  "tags": ["paper", "surface", "panel", "elevation"]
+}

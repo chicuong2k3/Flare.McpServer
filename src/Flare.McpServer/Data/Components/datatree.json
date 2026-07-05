@@ -1,0 +1,17 @@
+{
+  "name": "DataTree",
+  "displayName": "FlareDataTree",
+  "category": "DataDisplay",
+  "description": "Tree view for arbitrary data with lazy loading, checkboxes, and icons.",
+  "docUrl": "https://github.com/jrfrigat/Flare/blob/main/docs/en/ai-agents.md",
+  "apiUrl": "https://jrfrigat.github.io/Flare/api/FlareDataTree.html",
+  "parameters": [
+    { "name": "Items", "type": "IEnumerable<TItem>", "description": "Root nodes", "default": "", "required": true },
+    { "name": "ChildrenSelector", "type": "Func<TItem, IEnumerable<TItem>>", "description": "Get children", "default": "", "required": true },
+    { "name": "ItemTemplate", "type": "RenderFragment<TItem>", "description": "Node template", "default": "", "required": false }
+  ],
+  "events": [],
+  "subComponents": [],
+  "examples": ["<FlareDataTree Items=\"_nodes\" ChildrenSelector=\"n => n.Children\"><ItemTemplate>@context.Name</ItemTemplate></FlareDataTree>"],
+  "tags": ["tree", "data", "hierarchy", "folder"]
+}

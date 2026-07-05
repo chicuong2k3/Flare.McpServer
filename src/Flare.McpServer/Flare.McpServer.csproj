@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <PackageId>FlareUI.McpServer</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>FlareUI</Authors>
+    <Description>MCP server for Flare Blazor component library. Provides tools and resources for AI assistants to query component docs, generate code, and access theming info.</Description>
+    <PackageTags>mcp;flare;blazor;ai;components</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/jrfrigat/Flare</RepositoryUrl>
+
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>flare-mcp</ToolCommandName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.9" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="10.0.9" />
+    <PackageReference Include="ModelContextProtocol" Version="1.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Data\Components\*.json" />
+    <EmbeddedResource Include="Data\Docs\*.md" />
+  </ItemGroup>
+
+</Project>

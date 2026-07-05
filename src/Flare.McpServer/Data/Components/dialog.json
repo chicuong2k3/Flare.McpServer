@@ -1,0 +1,27 @@
+{
+  "name": "Dialog",
+  "displayName": "FlareDialog",
+  "category": "Overlays",
+  "description": "Modal dialog component with customizable size, title, content, and actions. Use with IDialogService for programmatic invocation.",
+  "docUrl": "https://github.com/jrfrigat/Flare/blob/main/docs/en/ai-agents.md",
+  "apiUrl": "https://jrfrigat.github.io/Flare/api/FlareDialog.html",
+  "parameters": [
+    { "name": "ChildContent", "type": "RenderFragment", "description": "Dialog body content", "default": "", "required": false },
+    { "name": "Visible", "type": "bool", "description": "Gets or sets dialog visibility", "default": "false", "required": false },
+    { "name": "Title", "type": "string", "description": "Dialog title", "default": "", "required": false },
+    { "name": "Size", "type": "DialogSize", "description": "Dialog width preset", "default": "Md", "required": false },
+    { "name": "CloseOnOverlayClick", "type": "bool", "description": "Close when clicking the backdrop", "default": "true", "required": false },
+    { "name": "CloseOnEscape", "type": "bool", "description": "Close when pressing Escape", "default": "true", "required": false },
+    { "name": "FullScreen", "type": "bool", "description": "Render as full-screen dialog", "default": "false", "required": false },
+    { "name": "ActionsTemplate", "type": "RenderFragment", "description": "Template for action buttons", "default": "", "required": false }
+  ],
+  "events": [
+    { "name": "OnClose", "type": "EventCallback", "description": "Fired when the dialog is closed" }
+  ],
+  "subComponents": [],
+  "examples": [
+    "<FlareDialog @bind-Visible=\"_open\" Title=\"Confirm\" Size=\"DialogSize.Sm\">\n    <p>Are you sure?</p>\n    <FlareButton OnClick=\"Confirm\">Yes</FlareButton>\n    <FlareButton OnClick=\"Cancel\" Variant=\"ButtonVariant.Outlined\">No</FlareButton>\n</FlareDialog>",
+    "var result = await Dialog.ConfirmAsync(\"Delete record\", \"This cannot be undone.\", \"Delete\", \"Cancel\");"
+  ],
+  "tags": ["modal", "dialog", "overlay", "popup", "confirm", "alert"]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "ThemeProvider",
+  "displayName": "FlareThemeProvider",
+  "category": "Theming",
+  "description": "Root component that cascades IThemeService and ThemeSnapshot to all Flare components. Wrap your entire app.",
+  "docUrl": "https://github.com/jrfrigat/Flare/blob/main/docs/en/ai-agents.md",
+  "apiUrl": "https://jrfrigat.github.io/Flare/api/FlareThemeProvider.html",
+  "parameters": [
+    { "name": "ChildContent", "type": "RenderFragment", "description": "App content", "default": "", "required": true },
+    { "name": "RespectSystemColorScheme", "type": "bool", "description": "Track OS prefers-color-scheme", "default": "true", "required": false },
+    { "name": "ManageSplash", "type": "bool", "description": "Hide anti-FOUC splash when ready", "default": "true", "required": false }
+  ],
+  "events": [],
+  "subComponents": [],
+  "examples": ["<FlareThemeProvider>\n    <Router AppAssembly=\"@typeof(App).Assembly\">...</Router>\n</FlareThemeProvider>"],
+  "tags": ["theme", "provider", "cascade", "root"]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "TableOfContents",
+  "displayName": "FlareTableOfContents",
+  "category": "Navigation",
+  "description": "Table of contents with nested link hierarchy and expand/collapse.",
+  "docUrl": "https://github.com/jrfrigat/Flare/blob/main/docs/en/ai-agents.md",
+  "apiUrl": "https://jrfrigat.github.io/Flare/api/FlareTableOfContents.html",
+  "parameters": [
+    { "name": "ChildContent", "type": "RenderFragment", "description": "TocLink children", "default": "", "required": true }
+  ],
+  "events": [],
+  "subComponents": ["FlareTocLink"],
+  "examples": ["<FlareTableOfContents>\n    <FlareTocLink Href=\"#intro\" Title=\"Introduction\" />\n    <FlareTocLink Href=\"#setup\" Title=\"Setup\" />\n</FlareTableOfContents>"],
+  "tags": ["toc", "contents", "navigation", "sidebar"]
+}

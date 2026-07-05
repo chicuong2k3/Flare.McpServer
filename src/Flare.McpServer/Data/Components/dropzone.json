@@ -1,0 +1,17 @@
+{
+  "name": "DropZone",
+  "displayName": "FlareDropZone",
+  "category": "Inputs",
+  "description": "Drag and drop target area for file uploads with visual feedback.",
+  "docUrl": "https://github.com/jrfrigat/Flare/blob/main/docs/en/ai-agents.md",
+  "apiUrl": "https://jrfrigat.github.io/Flare/api/FlareDropZone.html",
+  "parameters": [
+    { "name": "ChildContent", "type": "RenderFragment", "description": "Drop zone content", "default": "", "required": false },
+    { "name": "OnFilesDropped", "type": "EventCallback<IReadOnlyList<IBrowserFile>>", "description": "Files dropped callback", "default": "", "required": false },
+    { "name": "Accept", "type": "string", "description": "Accepted file types", "default": "", "required": false }
+  ],
+  "events": [],
+  "subComponents": [],
+  "examples": ["<FlareDropZone OnFilesDropped=\"HandleDrop\" Accept=\".pdf,.png\">\n    <p>Drop files here</p>\n</FlareDropZone>"],
+  "tags": ["input", "drag", "drop", "upload", "file"]
+}

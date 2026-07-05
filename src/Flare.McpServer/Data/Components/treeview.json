@@ -1,0 +1,18 @@
+{
+  "name": "TreeView",
+  "displayName": "FlareTreeView",
+  "category": "DataDisplay",
+  "description": "Hierarchical tree view with expand/collapse, checkboxes, drag-and-drop, and lazy loading.",
+  "docUrl": "https://github.com/jrfrigat/Flare/blob/main/docs/en/ai-agents.md",
+  "apiUrl": "https://jrfrigat.github.io/Flare/api/FlareTreeView.html",
+  "parameters": [
+    { "name": "Items", "type": "IEnumerable<TItem>", "description": "Tree data", "default": "", "required": true },
+    { "name": "ChildrenSelector", "type": "Func<TItem, IEnumerable<TItem>>", "description": "Get child items", "default": "", "required": true },
+    { "name": "Selectable", "type": "bool", "description": "Enable node selection", "default": "false", "required": false },
+    { "name": "Draggable", "type": "bool", "description": "Enable drag and drop", "default": "false", "required": false }
+  ],
+  "events": [],
+  "subComponents": [],
+  "examples": ["<FlareTreeView Items=\"_treeData\" ChildrenSelector=\"item => item.Children\" Selectable=\"true\" />"],
+  "tags": ["data", "tree", "hierarchy", "folder", "expand", "collapse"]
+}

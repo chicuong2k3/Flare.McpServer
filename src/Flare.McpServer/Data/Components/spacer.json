@@ -1,0 +1,13 @@
+{
+  "name": "Spacer",
+  "displayName": "FlareSpacer",
+  "category": "Layout",
+  "description": "Flex spacer that fills remaining space in a flex container.",
+  "docUrl": "https://github.com/jrfrigat/Flare/blob/main/docs/en/ai-agents.md",
+  "apiUrl": "https://jrfrigat.github.io/Flare/api/FlareSpacer.html",
+  "parameters": [],
+  "events": [],
+  "subComponents": [],
+  "examples": ["<FlareStack Direction=\"StackDirection.Horizontal\">\n    <FlareText>Start</FlareText>\n    <FlareSpacer />\n    <FlareText>End</FlareText>\n</FlareStack>"],
+  "tags": ["layout", "spacer", "flex", "fill"]
+}

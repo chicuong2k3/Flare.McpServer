@@ -1,0 +1,32 @@
+{
+  "name": "Button",
+  "displayName": "FlareButton",
+  "category": "Buttons",
+  "description": "Highly customizable button with variants, icons, loading state, and color support.",
+  "docUrl": "https://github.com/jrfrigat/Flare/blob/main/docs/en/ai-agents.md",
+  "apiUrl": "https://jrfrigat.github.io/Flare/api/FlareButton.html",
+  "parameters": [
+    { "name": "ChildContent", "type": "RenderFragment", "description": "Button content (text or markup)", "default": "", "required": false },
+    { "name": "Variant", "type": "ButtonVariant", "description": "Appearance style of the button", "default": "Filled", "required": false },
+    { "name": "Color", "type": "FlareColor", "description": "Color of the button", "default": "Default", "required": false },
+    { "name": "Size", "type": "Size", "description": "Size of the button", "default": "Md", "required": false },
+    { "name": "Type", "type": "ButtonType", "description": "HTML button type", "default": "Button", "required": false },
+    { "name": "Disabled", "type": "bool", "description": "Whether the button is disabled", "default": "false", "required": false },
+    { "name": "Loading", "type": "bool", "description": "Shows a loading spinner", "default": "false", "required": false },
+    { "name": "Icon", "type": "string", "description": "Material icon name to display", "default": "", "required": false },
+    { "name": "IconPosition", "type": "IconPosition", "description": "Position of the icon relative to text", "default": "Start", "required": false },
+    { "name": "FullWidth", "type": "bool", "description": "Whether the button stretches to full width", "default": "false", "required": false },
+    { "name": "Href", "type": "string", "description": "URL to navigate to (renders as anchor)", "default": "", "required": false },
+    { "name": "Target", "type": "string", "description": "Target for Href navigation", "default": "", "required": false }
+  ],
+  "events": [
+    { "name": "OnClick", "type": "EventCallback<MouseEventArgs>", "description": "Fired when the button is clicked" }
+  ],
+  "subComponents": [],
+  "examples": [
+    "<FlareButton Variant=\"ButtonVariant.Filled\" OnClick=\"Save\">Save</FlareButton>",
+    "<FlareButton Variant=\"ButtonVariant.Outlined\" Icon=\"delete\" Color=\"FlareColor.Error\">Delete</FlareButton>",
+    "<FlareButton Variant=\"ButtonVariant.Filled\" Loading=\"true\">Saving...</FlareButton>"
+  ],
+  "tags": ["button", "action", "click", "form", "submit", "icon"]
+}

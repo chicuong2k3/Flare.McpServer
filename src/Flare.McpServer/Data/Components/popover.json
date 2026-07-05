@@ -1,0 +1,22 @@
+{
+  "name": "Popover",
+  "displayName": "FlarePopover",
+  "category": "Overlays",
+  "description": "Popover overlay anchored to an element for contextual content.",
+  "docUrl": "https://github.com/jrfrigat/Flare/blob/main/docs/en/ai-agents.md",
+  "apiUrl": "https://jrfrigat.github.io/Flare/api/FlarePopover.html",
+  "parameters": [
+    { "name": "ChildContent", "type": "RenderFragment", "description": "Popover trigger and content", "default": "", "required": true },
+    { "name": "Open", "type": "bool", "description": "Gets or sets open state", "default": "false", "required": false },
+    { "name": "OpenChanged", "type": "EventCallback<bool>", "description": "Callback when open state changes", "default": "", "required": false },
+    { "name": "Position", "type": "Placement", "description": "Position relative to trigger", "default": "Bottom", "required": false },
+    { "name": "CloseOnContentClick", "type": "bool", "description": "Close when clicking inside content", "default": "false", "required": false },
+    { "name": "CloseOnOverlayClick", "type": "bool", "description": "Close when clicking outside", "default": "true", "required": false }
+  ],
+  "events": [],
+  "subComponents": [],
+  "examples": [
+    "<FlarePopover @bind-Open=\"_open\">\n    <FlareButton>Click me</FlareButton>\n    <PopoverContent>\n        <p>Popover content</p>\n    </PopoverContent>\n</FlarePopover>"
+  ],
+  "tags": ["popover", "overlay", "dropdown", "context", "popup"]
+}

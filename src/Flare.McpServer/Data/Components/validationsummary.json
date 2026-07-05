@@ -1,0 +1,15 @@
+{
+  "name": "ValidationSummary",
+  "displayName": "FlareValidationSummary",
+  "category": "Inputs",
+  "description": "Displays validation error messages from the EditContext in a themed alert block.",
+  "docUrl": "https://github.com/jrfrigat/Flare/blob/main/docs/en/ai-agents.md",
+  "apiUrl": "https://jrfrigat.github.io/Flare/api/FlareValidationSummary.html",
+  "parameters": [
+    { "name": "Model", "type": "string", "description": "Model to validate", "default": "", "required": false }
+  ],
+  "events": [],
+  "subComponents": [],
+  "examples": ["<FlareValidationSummary />"],
+  "tags": ["validation", "errors", "summary", "form"]
+}

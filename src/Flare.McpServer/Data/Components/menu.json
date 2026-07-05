@@ -1,0 +1,20 @@
+{
+  "name": "Menu",
+  "displayName": "FlareMenu",
+  "category": "Navigation",
+  "description": "Dropdown menu component with items, groups, submenus, and keyboard navigation.",
+  "docUrl": "https://github.com/jrfrigat/Flare/blob/main/docs/en/ai-agents.md",
+  "apiUrl": "https://jrfrigat.github.io/Flare/api/FlareMenu.html",
+  "parameters": [
+    { "name": "ChildContent", "type": "RenderFragment", "description": "MenuItem children", "default": "", "required": true },
+    { "name": "Open", "type": "bool", "description": "Gets or sets menu open state", "default": "false", "required": false },
+    { "name": "OpenChanged", "type": "EventCallback<bool>", "description": "Callback when open state changes", "default": "", "required": false },
+    { "name": "Position", "type": "Placement", "description": "Menu position relative to anchor", "default": "BottomStart", "required": false }
+  ],
+  "events": [],
+  "subComponents": ["FlareMenuItem", "FlareMenuGroup", "FlareSubMenu"],
+  "examples": [
+    "<FlareMenu>\n    <FlareMenuItem OnClick=\"Edit\">Edit</FlareMenuItem>\n    <FlareMenuItem OnClick=\"Copy\">Copy</FlareMenuItem>\n    <FlareSubMenu Title=\"Share\">\n        <FlareMenuItem>Email</FlareMenuItem>\n        <FlareMenuItem>Link</FlareMenuItem>\n    </FlareSubMenu>\n</FlareMenu>"
+  ],
+  "tags": ["menu", "dropdown", "context menu", "navigation"]
+}

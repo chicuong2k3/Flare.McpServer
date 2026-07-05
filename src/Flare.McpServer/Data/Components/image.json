@@ -1,0 +1,19 @@
+{
+  "name": "Image",
+  "displayName": "FlareImage",
+  "category": "Display",
+  "description": "Image component with lazy loading, placeholders, error fallback, and aspect ratio.",
+  "docUrl": "https://github.com/jrfrigat/Flare/blob/main/docs/en/ai-agents.md",
+  "apiUrl": "https://jrfrigat.github.io/Flare/api/FlareImage.html",
+  "parameters": [
+    { "name": "Src", "type": "string", "description": "Image URL", "default": "", "required": true },
+    { "name": "Alt", "type": "string", "description": "Alt text", "default": "", "required": false },
+    { "name": "Placeholder", "type": "RenderFragment", "description": "Loading placeholder", "default": "", "required": false },
+    { "name": "ErrorFallback", "type": "RenderFragment", "description": "Error fallback content", "default": "", "required": false },
+    { "name": "Lazy", "type": "bool", "description": "Lazy load image", "default": "true", "required": false }
+  ],
+  "events": [],
+  "subComponents": [],
+  "examples": ["<FlareImage Src=\"/photo.jpg\" Alt=\"Photo\" Lazy=\"true\" />"],
+  "tags": ["image", "picture", "photo", "media", "lazy"]
+}

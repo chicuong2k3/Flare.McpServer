@@ -1,0 +1,17 @@
+{
+  "name": "Hidden",
+  "displayName": "FlareHidden",
+  "category": "Layout",
+  "description": "Conditionally hide content based on responsive breakpoints.",
+  "docUrl": "https://github.com/jrfrigat/Flare/blob/main/docs/en/ai-agents.md",
+  "apiUrl": "https://jrfrigat.github.io/Flare/api/FlareHidden.html",
+  "parameters": [
+    { "name": "ChildContent", "type": "RenderFragment", "description": "Content to show/hide", "default": "", "required": true },
+    { "name": "HideOn", "type": "Breakpoint[]", "description": "Breakpoints to hide on", "default": "", "required": false },
+    { "name": "ShowOn", "type": "Breakpoint[]", "description": "Breakpoints to show on", "default": "", "required": false }
+  ],
+  "events": [],
+  "subComponents": [],
+  "examples": ["<FlareHidden HideOn=\"@new[] { Breakpoint.Sm, Breakpoint.Xs }\">Mobile-hidden content</FlareHidden>"],
+  "tags": ["layout", "hidden", "responsive", "breakpoint", "visibility"]
+}

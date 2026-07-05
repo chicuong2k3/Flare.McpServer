@@ -1,0 +1,15 @@
+{
+  "name": "Layout",
+  "displayName": "FlareLayout",
+  "category": "Layout",
+  "description": "Responsive page layout with app bar, drawer, and content areas.",
+  "docUrl": "https://github.com/jrfrigat/Flare/blob/main/docs/en/ai-agents.md",
+  "apiUrl": "https://jrfrigat.github.io/Flare/api/FlareLayout.html",
+  "parameters": [
+    { "name": "ChildContent", "type": "RenderFragment", "description": "Layout content", "default": "", "required": true }
+  ],
+  "events": [],
+  "subComponents": ["FlareLayoutAppBar", "FlareLayoutDrawer", "FlareLayoutContent"],
+  "examples": ["<FlareLayout>\n    <FlareLayoutAppBar>\n        <FlareAppBar Title=\"Dashboard\" />\n    </FlareLayoutAppBar>\n    <FlareLayoutDrawer>\n        <FlareNavMenu><!-- nav links --></FlareNavMenu>\n    </FlareLayoutDrawer>\n    <FlareLayoutContent>\n        @Body\n    </FlareLayoutContent>\n</FlareLayout>"],
+  "tags": ["layout", "page", "shell", "structure", "responsive"]
+}

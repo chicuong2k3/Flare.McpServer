@@ -1,0 +1,24 @@
+{
+  "name": "Card",
+  "displayName": "FlareCard",
+  "category": "DataDisplay",
+  "description": "Card container with optional header, content, actions, footer, and media sections.",
+  "docUrl": "https://github.com/jrfrigat/Flare/blob/main/docs/en/ai-agents.md",
+  "apiUrl": "https://jrfrigat.github.io/Flare/api/FlareCard.html",
+  "parameters": [
+    { "name": "ChildContent", "type": "RenderFragment", "description": "Card body content", "default": "", "required": false },
+    { "name": "Elevation", "type": "int", "description": "Shadow elevation level (0-6)", "default": "1", "required": false },
+    { "name": "Outlined", "type": "bool", "description": "Use outlined style instead of elevated", "default": "false", "required": false },
+    { "name": "HeaderTemplate", "type": "RenderFragment", "description": "Template for the card header", "default": "", "required": false },
+    { "name": "FooterTemplate", "type": "RenderFragment", "description": "Template for the card footer", "default": "", "required": false },
+    { "name": "ActionsTemplate", "type": "RenderFragment", "description": "Template for action buttons", "default": "", "required": false }
+  ],
+  "events": [
+    { "name": "OnClick", "type": "EventCallback<MouseEventArgs>", "description": "Fired when the card is clicked" }
+  ],
+  "subComponents": ["FlareCardHeader", "FlareCardContent", "FlareCardActions", "FlareCardFooter", "FlareCardMedia"],
+  "examples": [
+    "<FlareCard>\n    <FlareCardHeader>\n        <FlareText Typo=\"TypographyScale.HeadlineMedium\">Title</FlareText>\n    </FlareCardHeader>\n    <FlareCardContent>\n        <FlareText Typo=\"TypographyScale.BodyMedium\">Content here</FlareText>\n    </FlareCardContent>\n    <FlareCardActions>\n        <FlareButton Variant=\"ButtonVariant.Filled\">Action</FlareButton>\n    </FlareCardActions>\n</FlareCard>"
+  ],
+  "tags": ["container", "card", "layout", "content", "panel"]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Toolbar",
+  "displayName": "FlareToolbar",
+  "category": "Navigation",
+  "description": "Horizontal toolbar with groups of buttons, separators, and icons.",
+  "docUrl": "https://github.com/jrfrigat/Flare/blob/main/docs/en/ai-agents.md",
+  "apiUrl": "https://jrfrigat.github.io/Flare/api/FlareToolbar.html",
+  "parameters": [
+    { "name": "ChildContent", "type": "RenderFragment", "description": "Toolbar items", "default": "", "required": true }
+  ],
+  "events": [],
+  "subComponents": [],
+  "examples": ["<FlareToolbar>\n    <FlareButton Icon=\"undo\" />\n    <FlareButton Icon=\"redo\" />\n    <FlareDivider Vertical=\"true\" />\n    <FlareButton Icon=\"save\" />\n</FlareToolbar>"],
+  "tags": ["toolbar", "actions", "buttons", "bar"]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Badge",
+  "displayName": "FlareBadge",
+  "category": "Display",
+  "description": "Badge component for displaying counts, status indicators, or labels.",
+  "docUrl": "https://github.com/jrfrigat/Flare/blob/main/docs/en/ai-agents.md",
+  "apiUrl": "https://jrfrigat.github.io/Flare/api/FlareBadge.html",
+  "parameters": [
+    { "name": "ChildContent", "type": "RenderFragment", "description": "Badge content (often a number)", "default": "", "required": false },
+    { "name": "Color", "type": "FlareColor", "description": "Badge color", "default": "Default", "required": false },
+    { "name": "Position", "type": "BadgePosition", "description": "Position when used on an element", "default": "TopEnd", "required": false },
+    { "name": "Dot", "type": "bool", "description": "Show as a small dot without content", "default": "false", "required": false },
+    { "name": "Visible", "type": "bool", "description": "Whether the badge is visible", "default": "true", "required": false }
+  ],
+  "events": [],
+  "subComponents": [],
+  "examples": [
+    "<FlareBadge Color=\"FlareColor.Error\">5</FlareBadge>",
+    "<FlareBadge Dot=\"true\" Color=\"FlareColor.Success\" />"
+  ],
+  "tags": ["badge", "indicator", "notification", "count", "status", "label"]
+}

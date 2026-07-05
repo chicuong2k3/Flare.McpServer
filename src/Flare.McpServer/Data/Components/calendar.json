@@ -1,0 +1,17 @@
+{
+  "name": "Calendar",
+  "displayName": "FlareCalendar",
+  "category": "Inputs",
+  "description": "Standalone calendar for date selection, date range, and event display.",
+  "docUrl": "https://github.com/jrfrigat/Flare/blob/main/docs/en/ai-agents.md",
+  "apiUrl": "https://jrfrigat.github.io/Flare/api/FlareCalendar.html",
+  "parameters": [
+    { "name": "Value", "type": "DateTime?", "description": "Selected date", "default": "", "required": false },
+    { "name": "ValueChanged", "type": "EventCallback<DateTime?>", "description": "Callback", "default": "", "required": false },
+    { "name": "Events", "type": "IEnumerable<CalendarEvent>", "description": "Calendar events to highlight", "default": "", "required": false }
+  ],
+  "events": [],
+  "subComponents": [],
+  "examples": ["<FlareCalendar @bind-Value=\"_date\" />"],
+  "tags": ["input", "calendar", "date", "month", "picker"]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Highlighter",
+  "displayName": "FlareHighlighter",
+  "category": "Display",
+  "description": "Highlights matching text within a string with a colored background.",
+  "docUrl": "https://github.com/jrfrigat/Flare/blob/main/docs/en/ai-agents.md",
+  "apiUrl": "https://jrfrigat.github.io/Flare/api/FlareHighlighter.html",
+  "parameters": [
+    { "name": "Text", "type": "string", "description": "Full text to display", "default": "", "required": true },
+    { "name": "Query", "type": "string", "description": "Search term to highlight", "default": "", "required": true },
+    { "name": "Color", "type": "FlareColor", "description": "Highlight color", "default": "Warning", "required": false }
+  ],
+  "events": [],
+  "subComponents": [],
+  "examples": ["<FlareHighlighter Text=\"Hello World\" Query=\"World\" Color=\"FlareColor.Warning\" />"],
+  "tags": ["highlight", "search", "text", "mark"]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Breadcrumb",
+  "displayName": "FlareBreadcrumb",
+  "category": "Navigation",
+  "description": "Breadcrumb navigation trail showing the current page's location in the hierarchy.",
+  "docUrl": "https://github.com/jrfrigat/Flare/blob/main/docs/en/ai-agents.md",
+  "apiUrl": "https://jrfrigat.github.io/Flare/api/FlareBreadcrumb.html",
+  "parameters": [
+    { "name": "Items", "type": "IEnumerable<BreadcrumbItem>", "description": "Breadcrumb trail items", "default": "", "required": true },
+    { "name": "SeparatorTemplate", "type": "RenderFragment", "description": "Custom separator between items", "default": "", "required": false }
+  ],
+  "events": [],
+  "subComponents": [],
+  "examples": [
+    "<FlareBreadcrumb Items=\"_breadcrumbs\" />"
+  ],
+  "tags": ["breadcrumb", "navigation", "trail", "path", "hierarchy"]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Grid",
+  "displayName": "FlareGrid",
+  "category": "Layout",
+  "description": "CSS grid layout component with responsive column spans and gutters.",
+  "docUrl": "https://github.com/jrfrigat/Flare/blob/main/docs/en/ai-agents.md",
+  "apiUrl": "https://jrfrigat.github.io/Flare/api/FlareGrid.html",
+  "parameters": [
+    { "name": "ChildContent", "type": "RenderFragment", "description": "Grid children (FlareCol)", "default": "", "required": true },
+    { "name": "Columns", "type": "int", "description": "Number of grid columns", "default": "12", "required": false },
+    { "name": "Gap", "type": "string", "description": "Gap between grid items (CSS value)", "default": "", "required": false },
+    { "name": "Justify", "type": "GridJustify", "description": "Horizontal alignment", "default": "Start", "required": false },
+    { "name": "Align", "type": "GridAlign", "description": "Vertical alignment", "default": "Start", "required": false }
+  ],
+  "events": [],
+  "subComponents": ["FlareCol"],
+  "examples": [
+    "<FlareGrid Columns=\"12\" Gap=\"1rem\">\n    <FlareCol Span=\"6\" SpanMd=\"4\">Column 1</FlareCol>\n    <FlareCol Span=\"6\" SpanMd=\"8\">Column 2</FlareCol>\n</FlareGrid>"
+  ],
+  "tags": ["layout", "grid", "columns", "responsive", "flex"]
+}

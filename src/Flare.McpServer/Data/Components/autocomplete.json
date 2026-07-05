@@ -1,0 +1,24 @@
+{
+  "name": "Autocomplete",
+  "displayName": "FlareAutocomplete",
+  "category": "Inputs",
+  "description": "Autocomplete input with search, filtering, and item template support.",
+  "docUrl": "https://github.com/jrfrigat/Flare/blob/main/docs/en/ai-agents.md",
+  "apiUrl": "https://jrfrigat.github.io/Flare/api/FlareAutocomplete.html",
+  "parameters": [
+    { "name": "Value", "type": "string", "description": "Input text value", "default": "", "required": false },
+    { "name": "ValueChanged", "type": "EventCallback<string>", "description": "Callback when text changes", "default": "", "required": false },
+    { "name": "Items", "type": "IEnumerable<string>", "description": "Suggestions list", "default": "", "required": true },
+    { "name": "Label", "type": "string", "description": "Field label", "default": "", "required": false },
+    { "name": "Placeholder", "type": "string", "description": "Placeholder text", "default": "", "required": false },
+    { "name": "Color", "type": "FlareColor", "description": "Color theme", "default": "Default", "required": false },
+    { "name": "MinChars", "type": "int", "description": "Minimum characters before filtering", "default": "0", "required": false },
+    { "name": "ItemTemplate", "type": "RenderFragment<string>", "description": "Custom item template", "default": "", "required": false }
+  ],
+  "events": [],
+  "subComponents": [],
+  "examples": [
+    "<FlareAutocomplete @bind-Value=\"_query\" Items=\"_suggestions\" Label=\"Search\" MinChars=\"2\" />"
+  ],
+  "tags": ["autocomplete", "search", "suggestions", "input", "form"]
+}

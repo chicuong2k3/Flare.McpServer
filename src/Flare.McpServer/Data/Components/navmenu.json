@@ -1,0 +1,21 @@
+{
+  "name": "NavMenu",
+  "displayName": "FlareNavMenu",
+  "category": "Navigation",
+  "description": "Navigation menu with nested groups, links, and auto-expand for active routes.",
+  "docUrl": "https://github.com/jrfrigat/Flare/blob/main/docs/en/ai-agents.md",
+  "apiUrl": "https://jrfrigat.github.io/Flare/api/FlareNavMenu.html",
+  "parameters": [
+    { "name": "ChildContent", "type": "RenderFragment", "description": "Menu content (NavGroup/NavLink children)", "default": "", "required": true },
+    { "name": "Collapsed", "type": "bool", "description": "Whether the menu is collapsed", "default": "false", "required": false },
+    { "name": "Rail", "type": "bool", "description": "Render as slim rail with icons only", "default": "false", "required": false },
+    { "name": "Top", "type": "RenderFragment", "description": "Content pinned to the top of the menu", "default": "", "required": false },
+    { "name": "Bottom", "type": "RenderFragment", "description": "Content pinned to the bottom of the menu", "default": "", "required": false }
+  ],
+  "events": [],
+  "subComponents": ["FlareNavGroup", "FlareNavLink"],
+  "examples": [
+    "<FlareNavMenu>\n    <FlareNavLink Href=\"/\" Icon=\"home\" Title=\"Home\" />\n    <FlareNavGroup Title=\"Reports\" Icon=\"analytics\">\n        <FlareNavLink Href=\"/reports/sales\" Title=\"Sales\" />\n        <FlareNavLink Href=\"/reports/users\" Title=\"Users\" />\n    </FlareNavGroup>\n</FlareNavMenu>"
+  ],
+  "tags": ["navigation", "menu", "sidebar", "drawer", "nav", "link"]
+}

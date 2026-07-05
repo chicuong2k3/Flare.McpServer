@@ -1,0 +1,18 @@
+{
+  "name": "CodeBlock",
+  "displayName": "FlareCodeBlock",
+  "category": "Display",
+  "description": "Syntax-highlighted code block with line numbers, copy button, and language detection.",
+  "docUrl": "https://github.com/jrfrigat/Flare/blob/main/docs/en/ai-agents.md",
+  "apiUrl": "https://jrfrigat.github.io/Flare/api/FlareCodeBlock.html",
+  "parameters": [
+    { "name": "Code", "type": "string", "description": "Source code text", "default": "", "required": true },
+    { "name": "Language", "type": "string", "description": "Programming language (csharp, js, html, etc.)", "default": "", "required": false },
+    { "name": "ShowLineNumbers", "type": "bool", "description": "Show line numbers", "default": "true", "required": false },
+    { "name": "ShowCopy", "type": "bool", "description": "Show copy button", "default": "true", "required": false }
+  ],
+  "events": [],
+  "subComponents": [],
+  "examples": ["<FlareCodeBlock Code=\"@code\" Language=\"csharp\" ShowLineNumbers=\"true\" />"],
+  "tags": ["code", "syntax", "highlight", "editor", "display"]
+}

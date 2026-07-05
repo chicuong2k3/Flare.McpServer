@@ -1,0 +1,17 @@
+{
+  "name": "Form",
+  "displayName": "FlareForm",
+  "category": "Inputs",
+  "description": "Wraps Blazor's EditForm with Flare-styled layout, validation summary, and submit handling.",
+  "docUrl": "https://github.com/jrfrigat/Flare/blob/main/docs/en/ai-agents.md",
+  "apiUrl": "https://jrfrigat.github.io/Flare/api/FlareForm.html",
+  "parameters": [
+    { "name": "Model", "type": "object", "description": "Form model", "default": "", "required": true },
+    { "name": "OnValidSubmit", "type": "EventCallback", "description": "Valid submit callback", "default": "", "required": false },
+    { "name": "ChildContent", "type": "RenderFragment", "description": "Form body", "default": "", "required": false }
+  ],
+  "events": [],
+  "subComponents": [],
+  "examples": ["<FlareForm Model=\"_user\" OnValidSubmit=\"Save\">\n    <FlareTextField @bind-Value=\"_user.Name\" Label=\"Name\" />\n    <FlareButton Type=\"ButtonType.Submit\">Save</FlareButton>\n</FlareForm>"],
+  "tags": ["form", "validation", "editform", "submit"]
+}

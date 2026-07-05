@@ -1,0 +1,22 @@
+{
+  "name": "FileUpload",
+  "displayName": "FlareFileUpload",
+  "category": "Inputs",
+  "description": "File upload component with drag-and-drop, multi-file, preview, and progress support.",
+  "docUrl": "https://github.com/jrfrigat/Flare/blob/main/docs/en/ai-agents.md",
+  "apiUrl": "https://jrfrigat.github.io/Flare/api/FlareFileUpload.html",
+  "parameters": [
+    { "name": "Files", "type": "IReadOnlyList<IBrowserFile>", "description": "Selected files", "default": "", "required": false },
+    { "name": "OnFilesChanged", "type": "EventCallback<IReadOnlyList<IBrowserFile>>", "description": "Callback when files change", "default": "", "required": false },
+    { "name": "Multiple", "type": "bool", "description": "Allow multiple file selection", "default": "false", "required": false },
+    { "name": "Accept", "type": "string", "description": "Accepted file types (e.g. '.pdf,.doc')", "default": "", "required": false },
+    { "name": "MaxSize", "type": "long", "description": "Maximum file size in bytes", "default": "10485760", "required": false },
+    { "name": "Disabled", "type": "bool", "description": "Whether upload is disabled", "default": "false", "required": false }
+  ],
+  "events": [],
+  "subComponents": [],
+  "examples": [
+    "<FlareFileUpload Multiple=\"true\" Accept=\".pdf,.doc,.docx\" OnFilesChanged=\"HandleFiles\" />"
+  ],
+  "tags": ["file", "upload", "drag", "drop", "input", "form"]
+}

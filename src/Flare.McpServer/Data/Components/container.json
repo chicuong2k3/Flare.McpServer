@@ -1,0 +1,17 @@
+{
+  "name": "Container",
+  "displayName": "FlareContainer",
+  "category": "Layout",
+  "description": "Centered content container with configurable max-width breakpoints.",
+  "docUrl": "https://github.com/jrfrigat/Flare/blob/main/docs/en/ai-agents.md",
+  "apiUrl": "https://jrfrigat.github.io/Flare/api/FlareContainer.html",
+  "parameters": [
+    { "name": "ChildContent", "type": "RenderFragment", "description": "Container content", "default": "", "required": true },
+    { "name": "MaxWidth", "type": "ContainerMaxWidth", "description": "Max width preset", "default": "Lg", "required": false },
+    { "name": "Fluid", "type": "bool", "description": "Full-width with padding only", "default": "false", "required": false }
+  ],
+  "events": [],
+  "subComponents": [],
+  "examples": ["<FlareContainer MaxWidth=\"ContainerMaxWidth.Md\">\n    ... content ...\n</FlareContainer>"],
+  "tags": ["layout", "container", "center", "width", "responsive"]
+}

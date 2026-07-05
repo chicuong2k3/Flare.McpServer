@@ -1,0 +1,17 @@
+{
+  "name": "ToolPanel",
+  "displayName": "FlareToolPanel",
+  "category": "IDE",
+  "description": "Dockable tool panel for IDE layouts like Solution Explorer. Separate package: Flare.Components.IDE.",
+  "docUrl": "https://github.com/jrfrigat/Flare/blob/main/docs/en/ai-agents.md",
+  "apiUrl": "https://jrfrigat.github.io/Flare/api/FlareToolPanel.html",
+  "parameters": [
+    { "name": "ChildContent", "type": "RenderFragment", "description": "Panel content", "default": "", "required": true },
+    { "name": "Title", "type": "string", "description": "Panel title", "default": "", "required": false },
+    { "name": "Position", "type": "Placement", "description": "Docking position", "default": "Right", "required": false }
+  ],
+  "events": [],
+  "subComponents": [],
+  "examples": ["<FlareToolPanel Title=\"Solution Explorer\" Position=\"Placement.Right\">\n    <FlareTreeView Items=\"_files\" />\n</FlareToolPanel>"],
+  "tags": ["tool", "panel", "dock", "ide", "sidebar"]
+}

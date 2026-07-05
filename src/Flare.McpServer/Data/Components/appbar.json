@@ -1,0 +1,24 @@
+{
+  "name": "AppBar",
+  "displayName": "FlareAppBar",
+  "category": "Navigation",
+  "description": "Top app bar with navigation toggle, title, actions, and sticky/scroll behavior.",
+  "docUrl": "https://github.com/jrfrigat/Flare/blob/main/docs/en/ai-agents.md",
+  "apiUrl": "https://jrfrigat.github.io/Flare/api/FlareAppBar.html",
+  "parameters": [
+    { "name": "ChildContent", "type": "RenderFragment", "description": "App bar content", "default": "", "required": false },
+    { "name": "Title", "type": "string", "description": "Title text", "default": "", "required": false },
+    { "name": "TitleTemplate", "type": "RenderFragment", "description": "Custom title content", "default": "", "required": false },
+    { "name": "ActionsTemplate", "type": "RenderFragment", "description": "Action buttons area", "default": "", "required": false },
+    { "name": "NavigationTemplate", "type": "RenderFragment", "description": "Navigation/menu toggle area", "default": "", "required": false },
+    { "name": "Sticky", "type": "bool", "description": "Stick to top on scroll", "default": "false", "required": false },
+    { "name": "Elevation", "type": "int", "description": "Shadow elevation (0-6)", "default": "2", "required": false },
+    { "name": "Color", "type": "FlareColor", "description": "App bar color", "default": "Default", "required": false }
+  ],
+  "events": [],
+  "subComponents": [],
+  "examples": [
+    "<FlareAppBar Title=\"Dashboard\" Sticky=\"true\">\n    <NavigationTemplate>\n        <FlareButton Icon=\"menu\" OnClick=\"ToggleDrawer\" />\n    </NavigationTemplate>\n    <ActionsTemplate>\n        <FlareButton Icon=\"notifications\" />\n        <FlareAvatar Src=\"/avatar.png\" />\n    </ActionsTemplate>\n</FlareAppBar>"
+  ],
+  "tags": ["header", "appbar", "navigation", "toolbar", "topbar"]
+}
