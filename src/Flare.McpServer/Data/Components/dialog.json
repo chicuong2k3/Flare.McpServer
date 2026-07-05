@@ -2,26 +2,26 @@
   "name": "Dialog",
   "displayName": "FlareDialog",
   "category": "Overlays",
-  "description": "Modal dialog component with customizable size, title, content, and actions. Use with IDialogService for programmatic invocation.",
+  "description": "Modal dialog with title, icon, body content, actions, scrim close, ESC close, and divider. Use with IDialogService or standalone via @bind-Visible.",
   "docUrl": "https://github.com/jrfrigat/Flare/blob/main/docs/en/ai-agents.md",
-  "apiUrl": "https://jrfrigat.github.io/Flare/api/FlareDialog.html",
+  "apiUrl": "https://jrfrigat.github.io/Flare/api/Flare.Components.FlareDialog.html",
   "parameters": [
-    { "name": "ChildContent", "type": "RenderFragment", "description": "Dialog body content", "default": "", "required": false },
-    { "name": "Visible", "type": "bool", "description": "Gets or sets dialog visibility", "default": "false", "required": false },
-    { "name": "Title", "type": "string", "description": "Dialog title", "default": "", "required": false },
-    { "name": "Size", "type": "DialogSize", "description": "Dialog width preset", "default": "Md", "required": false },
-    { "name": "CloseOnOverlayClick", "type": "bool", "description": "Close when clicking the backdrop", "default": "true", "required": false },
-    { "name": "CloseOnEscape", "type": "bool", "description": "Close when pressing Escape", "default": "true", "required": false },
-    { "name": "FullScreen", "type": "bool", "description": "Render as full-screen dialog", "default": "false", "required": false },
-    { "name": "ActionsTemplate", "type": "RenderFragment", "description": "Template for action buttons", "default": "", "required": false }
+    { "name": "ChildContent", "type": "RenderFragment?", "description": "Main body content rendered inside the dialog.", "default": "", "required": false },
+    { "name": "Title", "type": "string?", "description": "Title text displayed in the dialog header.", "default": "", "required": false },
+    { "name": "Icon", "type": "RenderFragment?", "description": "Optional hero icon shown centered above the title.", "default": "", "required": false },
+    { "name": "Actions", "type": "RenderFragment?", "description": "Action buttons rendered in the dialog footer.", "default": "", "required": false },
+    { "name": "Visible", "type": "bool", "description": "Controls whether the dialog is shown. Supports @bind-Visible.", "default": "false", "required": false },
+    { "name": "Size", "type": "string?", "description": "Maximum width of the dialog (Sm, Md, Lg, or CSS value).", "default": "", "required": false },
+    { "name": "CloseOnScrimClick", "type": "bool", "description": "Closes the dialog when the scrim backdrop is clicked.", "default": "true", "required": false },
+    { "name": "CloseOnEsc", "type": "bool", "description": "Closes the dialog when the Escape key is pressed.", "default": "true", "required": false },
+    { "name": "Divider", "type": "bool", "description": "Shows a divider between the header and the content.", "default": "false", "required": false },
+    { "name": "AriaLabel", "type": "string?", "description": "Accessible name when Title is empty (aria-label).", "default": "", "required": false }
   ],
-  "events": [
-    { "name": "OnClose", "type": "EventCallback", "description": "Fired when the dialog is closed" }
-  ],
+  "events": [],
   "subComponents": [],
   "examples": [
-    "<FlareDialog @bind-Visible=\"_open\" Title=\"Confirm\" Size=\"DialogSize.Sm\">\n    <p>Are you sure?</p>\n    <FlareButton OnClick=\"Confirm\">Yes</FlareButton>\n    <FlareButton OnClick=\"Cancel\" Variant=\"ButtonVariant.Outlined\">No</FlareButton>\n</FlareDialog>",
-    "var result = await Dialog.ConfirmAsync(\"Delete record\", \"This cannot be undone.\", \"Delete\", \"Cancel\");"
+    "<FlareDialog @bind-Visible=\"_open\" Title=\"Confirm\" Size=\"Sm\">\n    <p>Are you sure?</p>\n    <Actions><FlareButton OnClick=\"Confirm\">Yes</FlareButton></Actions>\n</FlareDialog>",
+    "var ok = await Dialog.ConfirmAsync(\"Delete\", \"Cannot be undone.\", \"Delete\", \"Cancel\");"
   ],
-  "tags": ["modal", "dialog", "overlay", "popup", "confirm", "alert"]
+  "tags": ["dialog", "modal", "overlay", "popup", "confirm", "alert"]
 }
